@@ -1,5 +1,5 @@
 Timing Analyzer report for ft232h_245fifo
-Fri Nov 17 14:06:04 2023
+Fri Nov 17 15:40:09 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -93,14 +93,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.63        ;
+; Average used               ; 1.57        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  21.7%      ;
-;     Processor 3            ;  20.6%      ;
-;     Processor 4            ;  20.5%      ;
+;     Processor 2            ;  19.5%      ;
+;     Processor 3            ;  19.0%      ;
+;     Processor 4            ;  18.8%      ;
 +----------------------------+-------------+
 
 
@@ -119,8 +119,8 @@ refer to the applicable agreement for further details.
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 146.16 MHz ; 146.16 MHz      ; ftdi_clk   ;      ;
-; 159.39 MHz ; 159.39 MHz      ; clk        ;      ;
+; 137.65 MHz ; 137.65 MHz      ; clk        ;      ;
+; 177.87 MHz ; 177.87 MHz      ; ftdi_clk   ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -130,8 +130,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+--------+-----------------+
 ; Clock    ; Slack  ; End Point TNS   ;
 +----------+--------+-----------------+
-; ftdi_clk ; -5.842 ; -1818.268       ;
-; clk      ; -5.274 ; -1191.480       ;
+; clk      ; -6.265 ; -1186.124       ;
+; ftdi_clk ; -4.622 ; -1185.487       ;
 +----------+--------+-----------------+
 
 
@@ -140,8 +140,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+-----------------+
 ; Clock    ; Slack ; End Point TNS   ;
 +----------+-------+-----------------+
-; ftdi_clk ; 0.123 ; 0.000           ;
-; clk      ; 0.331 ; 0.000           ;
+; ftdi_clk ; 0.119 ; 0.000           ;
+; clk      ; 0.344 ; 0.000           ;
 +----------+-------+-----------------+
 
 
@@ -150,8 +150,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+--------+--------------------+
 ; Clock    ; Slack  ; End Point TNS      ;
 +----------+--------+--------------------+
-; clk      ; -2.436 ; -563.478           ;
-; ftdi_clk ; -1.566 ; -410.745           ;
+; ftdi_clk ; -2.210 ; -263.276           ;
+; clk      ; -1.849 ; -423.824           ;
 +----------+--------+--------------------+
 
 
@@ -160,8 +160,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+--------------------+
 ; Clock    ; Slack ; End Point TNS      ;
 +----------+-------+--------------------+
-; ftdi_clk ; 1.098 ; 0.000              ;
-; clk      ; 1.831 ; 0.000              ;
+; ftdi_clk ; 0.694 ; 0.000              ;
+; clk      ; 1.813 ; 0.000              ;
 +----------+-------+--------------------+
 
 
@@ -170,8 +170,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+--------+-------------------------------+
 ; Clock    ; Slack  ; End Point TNS                 ;
 +----------+--------+-------------------------------+
-; ftdi_clk ; -3.901 ; -764.847                      ;
-; clk      ; -3.901 ; -546.644                      ;
+; ftdi_clk ; -3.901 ; -600.562                      ;
+; clk      ; -3.901 ; -481.969                      ;
 +----------+--------+-------------------------------+
 
 
@@ -187,8 +187,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 153.94 MHz ; 153.94 MHz      ; ftdi_clk   ;      ;
-; 169.69 MHz ; 169.69 MHz      ; clk        ;      ;
+; 147.04 MHz ; 147.04 MHz      ; clk        ;      ;
+; 190.08 MHz ; 190.08 MHz      ; ftdi_clk   ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -198,8 +198,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+--------+----------------+
 ; Clock    ; Slack  ; End Point TNS  ;
 +----------+--------+----------------+
-; ftdi_clk ; -5.496 ; -1691.389      ;
-; clk      ; -4.893 ; -1105.592      ;
+; clk      ; -5.801 ; -1099.316      ;
+; ftdi_clk ; -4.261 ; -1091.134      ;
 +----------+--------+----------------+
 
 
@@ -208,8 +208,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+--------+---------------+
 ; Clock    ; Slack  ; End Point TNS ;
 +----------+--------+---------------+
-; ftdi_clk ; -0.072 ; -0.256        ;
-; clk      ; 0.302  ; 0.000         ;
+; ftdi_clk ; -0.072 ; -0.210        ;
+; clk      ; 0.308  ; 0.000         ;
 +----------+--------+---------------+
 
 
@@ -218,8 +218,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+--------+-------------------+
 ; Clock    ; Slack  ; End Point TNS     ;
 +----------+--------+-------------------+
-; clk      ; -2.157 ; -487.080          ;
-; ftdi_clk ; -1.315 ; -319.451          ;
+; ftdi_clk ; -1.937 ; -191.724          ;
+; clk      ; -1.599 ; -364.008          ;
 +----------+--------+-------------------+
 
 
@@ -228,8 +228,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+-------------------+
 ; Clock    ; Slack ; End Point TNS     ;
 +----------+-------+-------------------+
-; ftdi_clk ; 0.958 ; 0.000             ;
-; clk      ; 1.635 ; 0.000             ;
+; ftdi_clk ; 0.554 ; 0.000             ;
+; clk      ; 1.626 ; 0.000             ;
 +----------+-------+-------------------+
 
 
@@ -238,8 +238,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+--------+------------------------------+
 ; Clock    ; Slack  ; End Point TNS                ;
 +----------+--------+------------------------------+
-; ftdi_clk ; -3.901 ; -772.078                     ;
-; clk      ; -3.901 ; -546.644                     ;
+; ftdi_clk ; -3.901 ; -609.406                     ;
+; clk      ; -3.901 ; -481.969                     ;
 +----------+--------+------------------------------+
 
 
@@ -255,8 +255,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +----------+--------+----------------+
 ; Clock    ; Slack  ; End Point TNS  ;
 +----------+--------+----------------+
-; ftdi_clk ; -1.752 ; -448.501       ;
-; clk      ; -1.563 ; -302.686       ;
+; clk      ; -1.804 ; -309.430       ;
+; ftdi_clk ; -1.220 ; -247.691       ;
 +----------+--------+----------------+
 
 
@@ -265,8 +265,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +----------+-------+----------------+
 ; Clock    ; Slack ; End Point TNS  ;
 +----------+-------+----------------+
-; ftdi_clk ; 0.074 ; 0.000          ;
-; clk      ; 0.111 ; 0.000          ;
+; ftdi_clk ; 0.057 ; 0.000          ;
+; clk      ; 0.145 ; 0.000          ;
 +----------+-------+----------------+
 
 
@@ -275,8 +275,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +----------+--------+-------------------+
 ; Clock    ; Slack  ; End Point TNS     ;
 +----------+--------+-------------------+
-; clk      ; -0.584 ; -100.700          ;
-; ftdi_clk ; -0.170 ; -8.099            ;
+; ftdi_clk ; -0.451 ; -14.701           ;
+; clk      ; -0.337 ; -71.571           ;
 +----------+--------+-------------------+
 
 
@@ -285,8 +285,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +----------+-------+-------------------+
 ; Clock    ; Slack ; End Point TNS     ;
 +----------+-------+-------------------+
-; ftdi_clk ; 0.522 ; 0.000             ;
-; clk      ; 0.836 ; 0.000             ;
+; ftdi_clk ; 0.351 ; 0.000             ;
+; clk      ; 0.819 ; 0.000             ;
 +----------+-------+-------------------+
 
 
@@ -295,8 +295,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +----------+--------+------------------------------+
 ; Clock    ; Slack  ; End Point TNS                ;
 +----------+--------+------------------------------+
-; ftdi_clk ; -3.000 ; -554.370                     ;
-; clk      ; -3.000 ; -355.567                     ;
+; ftdi_clk ; -3.000 ; -454.492                     ;
+; clk      ; -3.000 ; -315.763                     ;
 +----------+--------+------------------------------+
 
 
@@ -312,12 +312,12 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------------+-----------+--------+----------+---------+---------------------+
 ; Clock            ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+-----------+--------+----------+---------+---------------------+
-; Worst-case Slack ; -5.842    ; -0.072 ; -2.436   ; 0.522   ; -3.901              ;
-;  clk             ; -5.274    ; 0.111  ; -2.436   ; 0.836   ; -3.901              ;
-;  ftdi_clk        ; -5.842    ; -0.072 ; -1.566   ; 0.522   ; -3.901              ;
-; Design-wide TNS  ; -3009.748 ; -0.256 ; -974.223 ; 0.0     ; -1318.722           ;
-;  clk             ; -1191.480 ; 0.000  ; -563.478 ; 0.000   ; -546.644            ;
-;  ftdi_clk        ; -1818.268 ; -0.256 ; -410.745 ; 0.000   ; -772.078            ;
+; Worst-case Slack ; -6.265    ; -0.072 ; -2.210   ; 0.351   ; -3.901              ;
+;  clk             ; -6.265    ; 0.145  ; -1.849   ; 0.819   ; -3.901              ;
+;  ftdi_clk        ; -4.622    ; -0.072 ; -2.210   ; 0.351   ; -3.901              ;
+; Design-wide TNS  ; -2371.611 ; -0.21  ; -687.1   ; 0.0     ; -1091.375           ;
+;  clk             ; -1186.124 ; 0.000  ; -423.824 ; 0.000   ; -481.969            ;
+;  ftdi_clk        ; -1185.487 ; -0.210 ; -263.276 ; 0.000   ; -609.406            ;
 +------------------+-----------+--------+----------+---------+---------------------+
 
 
@@ -330,6 +330,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; LED[1]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; LED[2]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; LED[3]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ftdi_resetn  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ftdi_pwrsav  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ftdi_siwu    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ftdi_oe_n    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ftdi_rd_n    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ftdi_wr_n    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -381,6 +384,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; LED[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.47e-09 V                   ; 2.4 V               ; -0.0932 V           ; 0.135 V                              ; 0.16 V                               ; 4.43e-10 s                  ; 4.36e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.47e-09 V                  ; 2.4 V              ; -0.0932 V          ; 0.135 V                             ; 0.16 V                              ; 4.43e-10 s                 ; 4.36e-10 s                 ; No                        ; Yes                       ;
 ; LED[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.47e-09 V                   ; 2.4 V               ; -0.0905 V           ; 0.135 V                              ; 0.167 V                              ; 4.43e-10 s                  ; 4.36e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.47e-09 V                  ; 2.4 V              ; -0.0905 V          ; 0.135 V                             ; 0.167 V                             ; 4.43e-10 s                 ; 4.36e-10 s                 ; No                        ; Yes                       ;
 ; LED[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.47e-09 V                   ; 2.4 V               ; -0.0932 V           ; 0.135 V                              ; 0.16 V                               ; 4.43e-10 s                  ; 4.36e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.47e-09 V                  ; 2.4 V              ; -0.0932 V          ; 0.135 V                             ; 0.16 V                              ; 4.43e-10 s                 ; 4.36e-10 s                 ; No                        ; Yes                       ;
+; ftdi_resetn  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.47e-09 V                   ; 2.4 V               ; -0.0905 V           ; 0.135 V                              ; 0.167 V                              ; 4.43e-10 s                  ; 4.36e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.47e-09 V                  ; 2.4 V              ; -0.0905 V          ; 0.135 V                             ; 0.167 V                             ; 4.43e-10 s                 ; 4.36e-10 s                 ; No                        ; Yes                       ;
+; ftdi_pwrsav  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.47e-09 V                   ; 2.4 V               ; -0.0905 V           ; 0.135 V                              ; 0.167 V                              ; 4.43e-10 s                  ; 4.36e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.47e-09 V                  ; 2.4 V              ; -0.0905 V          ; 0.135 V                             ; 0.167 V                             ; 4.43e-10 s                 ; 4.36e-10 s                 ; No                        ; Yes                       ;
+; ftdi_siwu    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.48e-09 V                   ; 2.39 V              ; -0.0848 V           ; 0.163 V                              ; 0.202 V                              ; 4.62e-10 s                  ; 4.54e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.48e-09 V                  ; 2.39 V             ; -0.0848 V          ; 0.163 V                             ; 0.202 V                             ; 4.62e-10 s                 ; 4.54e-10 s                 ; No                        ; Yes                       ;
 ; ftdi_oe_n    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.47e-09 V                   ; 2.4 V               ; -0.0932 V           ; 0.135 V                              ; 0.16 V                               ; 4.43e-10 s                  ; 4.36e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.47e-09 V                  ; 2.4 V              ; -0.0932 V          ; 0.135 V                             ; 0.16 V                              ; 4.43e-10 s                 ; 4.36e-10 s                 ; No                        ; Yes                       ;
 ; ftdi_rd_n    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.47e-09 V                   ; 2.4 V               ; -0.0905 V           ; 0.135 V                              ; 0.167 V                              ; 4.43e-10 s                  ; 4.36e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.47e-09 V                  ; 2.4 V              ; -0.0905 V          ; 0.135 V                             ; 0.167 V                             ; 4.43e-10 s                 ; 4.36e-10 s                 ; No                        ; Yes                       ;
 ; ftdi_wr_n    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.47e-09 V                   ; 2.4 V               ; -0.0905 V           ; 0.135 V                              ; 0.167 V                              ; 4.43e-10 s                  ; 4.36e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.47e-09 V                  ; 2.4 V              ; -0.0905 V          ; 0.135 V                             ; 0.167 V                             ; 4.43e-10 s                 ; 4.36e-10 s                 ; No                        ; Yes                       ;
@@ -405,6 +411,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; LED[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.66e-07 V                   ; 2.37 V              ; -0.0521 V           ; 0.17 V                               ; 0.231 V                              ; 4.74e-10 s                  ; 4.79e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.66e-07 V                  ; 2.37 V             ; -0.0521 V          ; 0.17 V                              ; 0.231 V                             ; 4.74e-10 s                 ; 4.79e-10 s                 ; Yes                       ; Yes                       ;
 ; LED[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.66e-07 V                   ; 2.37 V              ; -0.0526 V           ; 0.169 V                              ; 0.23 V                               ; 4.75e-10 s                  ; 4.8e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 4.66e-07 V                  ; 2.37 V             ; -0.0526 V          ; 0.169 V                             ; 0.23 V                              ; 4.75e-10 s                 ; 4.8e-10 s                  ; Yes                       ; Yes                       ;
 ; LED[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.66e-07 V                   ; 2.37 V              ; -0.0521 V           ; 0.17 V                               ; 0.231 V                              ; 4.74e-10 s                  ; 4.79e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.66e-07 V                  ; 2.37 V             ; -0.0521 V          ; 0.17 V                              ; 0.231 V                             ; 4.74e-10 s                 ; 4.79e-10 s                 ; Yes                       ; Yes                       ;
+; ftdi_resetn  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.66e-07 V                   ; 2.37 V              ; -0.0526 V           ; 0.169 V                              ; 0.23 V                               ; 4.75e-10 s                  ; 4.8e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 4.66e-07 V                  ; 2.37 V             ; -0.0526 V          ; 0.169 V                             ; 0.23 V                              ; 4.75e-10 s                 ; 4.8e-10 s                  ; Yes                       ; Yes                       ;
+; ftdi_pwrsav  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.66e-07 V                   ; 2.37 V              ; -0.0526 V           ; 0.169 V                              ; 0.23 V                               ; 4.75e-10 s                  ; 4.8e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 4.66e-07 V                  ; 2.37 V             ; -0.0526 V          ; 0.169 V                             ; 0.23 V                              ; 4.75e-10 s                 ; 4.8e-10 s                  ; Yes                       ; Yes                       ;
+; ftdi_siwu    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.66e-07 V                   ; 2.36 V              ; -0.0484 V           ; 0.228 V                              ; 0.115 V                              ; 5.12e-10 s                  ; 6.12e-10 s                  ; Yes                        ; No                         ; 2.32 V                      ; 4.66e-07 V                  ; 2.36 V             ; -0.0484 V          ; 0.228 V                             ; 0.115 V                             ; 5.12e-10 s                 ; 6.12e-10 s                 ; Yes                       ; No                        ;
 ; ftdi_oe_n    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.66e-07 V                   ; 2.37 V              ; -0.0521 V           ; 0.17 V                               ; 0.231 V                              ; 4.74e-10 s                  ; 4.79e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.66e-07 V                  ; 2.37 V             ; -0.0521 V          ; 0.17 V                              ; 0.231 V                             ; 4.74e-10 s                 ; 4.79e-10 s                 ; Yes                       ; Yes                       ;
 ; ftdi_rd_n    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.66e-07 V                   ; 2.37 V              ; -0.0526 V           ; 0.169 V                              ; 0.23 V                               ; 4.75e-10 s                  ; 4.8e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 4.66e-07 V                  ; 2.37 V             ; -0.0526 V          ; 0.169 V                             ; 0.23 V                              ; 4.75e-10 s                 ; 4.8e-10 s                  ; Yes                       ; Yes                       ;
 ; ftdi_wr_n    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.66e-07 V                   ; 2.37 V              ; -0.0526 V           ; 0.169 V                              ; 0.23 V                               ; 4.75e-10 s                  ; 4.8e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 4.66e-07 V                  ; 2.37 V             ; -0.0526 V          ; 0.169 V                             ; 0.23 V                              ; 4.75e-10 s                 ; 4.8e-10 s                  ; Yes                       ; Yes                       ;
@@ -429,6 +438,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; LED[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; LED[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; LED[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; ftdi_resetn  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; ftdi_pwrsav  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; ftdi_siwu    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.77 V              ; -0.0485 V           ; 0.289 V                              ; 0.058 V                              ; 2.81e-10 s                  ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.77 V             ; -0.0485 V          ; 0.289 V                             ; 0.058 V                             ; 2.81e-10 s                 ; 3.04e-10 s                 ; No                        ; Yes                       ;
 ; ftdi_oe_n    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; ftdi_rd_n    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; ftdi_wr_n    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
@@ -449,10 +461,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 18706    ; 0        ; 0        ; 0        ;
-; ftdi_clk   ; clk      ; 22       ; 0        ; 0        ; 0        ;
-; clk        ; ftdi_clk ; 22       ; 0        ; 0        ; 0        ;
-; ftdi_clk   ; ftdi_clk ; 17524    ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 19232    ; 0        ; 0        ; 0        ;
+; ftdi_clk   ; clk      ; 20       ; 0        ; 0        ; 0        ;
+; clk        ; ftdi_clk ; 20       ; 0        ; 0        ; 0        ;
+; ftdi_clk   ; ftdi_clk ; 13186    ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -462,10 +474,10 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 18706    ; 0        ; 0        ; 0        ;
-; ftdi_clk   ; clk      ; 22       ; 0        ; 0        ; 0        ;
-; clk        ; ftdi_clk ; 22       ; 0        ; 0        ; 0        ;
-; ftdi_clk   ; ftdi_clk ; 17524    ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 19232    ; 0        ; 0        ; 0        ;
+; ftdi_clk   ; clk      ; 20       ; 0        ; 0        ; 0        ;
+; clk        ; ftdi_clk ; 20       ; 0        ; 0        ; 0        ;
+; ftdi_clk   ; ftdi_clk ; 13186    ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -475,8 +487,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 314      ; 0        ; 0        ; 0        ;
-; ftdi_clk   ; ftdi_clk ; 415      ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 244      ; 0        ; 0        ; 0        ;
+; ftdi_clk   ; ftdi_clk ; 336      ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -486,8 +498,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 314      ; 0        ; 0        ; 0        ;
-; ftdi_clk   ; ftdi_clk ; 415      ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 244      ; 0        ; 0        ; 0        ;
+; ftdi_clk   ; ftdi_clk ; 336      ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -616,7 +628,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Fri Nov 17 14:06:00 2023
+    Info: Processing started: Fri Nov 17 15:40:05 2023
 Info: Command: quartus_sta ft232h_245fifo -c ft232h_245fifo
 Info: qsta_default_script.tcl version: #2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -634,100 +646,100 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -5.842
+Info (332146): Worst-case setup slack is -6.265
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.842           -1818.268 ftdi_clk 
-    Info (332119):    -5.274           -1191.480 clk 
-Info (332146): Worst-case hold slack is 0.123
+    Info (332119):    -6.265           -1186.124 clk 
+    Info (332119):    -4.622           -1185.487 ftdi_clk 
+Info (332146): Worst-case hold slack is 0.119
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.123               0.000 ftdi_clk 
-    Info (332119):     0.331               0.000 clk 
-Info (332146): Worst-case recovery slack is -2.436
+    Info (332119):     0.119               0.000 ftdi_clk 
+    Info (332119):     0.344               0.000 clk 
+Info (332146): Worst-case recovery slack is -2.210
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.436            -563.478 clk 
-    Info (332119):    -1.566            -410.745 ftdi_clk 
-Info (332146): Worst-case removal slack is 1.098
+    Info (332119):    -2.210            -263.276 ftdi_clk 
+    Info (332119):    -1.849            -423.824 clk 
+Info (332146): Worst-case removal slack is 0.694
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.098               0.000 ftdi_clk 
-    Info (332119):     1.831               0.000 clk 
+    Info (332119):     0.694               0.000 ftdi_clk 
+    Info (332119):     1.813               0.000 clk 
 Info (332146): Worst-case minimum pulse width slack is -3.901
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.901            -764.847 ftdi_clk 
-    Info (332119):    -3.901            -546.644 clk 
-Info (332114): Report Metastability: Found 44 synchronizer chains.
+    Info (332119):    -3.901            -600.562 ftdi_clk 
+    Info (332119):    -3.901            -481.969 clk 
+Info (332114): Report Metastability: Found 40 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -5.496
+Info (332146): Worst-case setup slack is -5.801
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.496           -1691.389 ftdi_clk 
-    Info (332119):    -4.893           -1105.592 clk 
+    Info (332119):    -5.801           -1099.316 clk 
+    Info (332119):    -4.261           -1091.134 ftdi_clk 
 Info (332146): Worst-case hold slack is -0.072
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.072              -0.256 ftdi_clk 
-    Info (332119):     0.302               0.000 clk 
-Info (332146): Worst-case recovery slack is -2.157
+    Info (332119):    -0.072              -0.210 ftdi_clk 
+    Info (332119):     0.308               0.000 clk 
+Info (332146): Worst-case recovery slack is -1.937
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.157            -487.080 clk 
-    Info (332119):    -1.315            -319.451 ftdi_clk 
-Info (332146): Worst-case removal slack is 0.958
+    Info (332119):    -1.937            -191.724 ftdi_clk 
+    Info (332119):    -1.599            -364.008 clk 
+Info (332146): Worst-case removal slack is 0.554
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.958               0.000 ftdi_clk 
-    Info (332119):     1.635               0.000 clk 
+    Info (332119):     0.554               0.000 ftdi_clk 
+    Info (332119):     1.626               0.000 clk 
 Info (332146): Worst-case minimum pulse width slack is -3.901
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.901            -772.078 ftdi_clk 
-    Info (332119):    -3.901            -546.644 clk 
-Info (332114): Report Metastability: Found 44 synchronizer chains.
+    Info (332119):    -3.901            -609.406 ftdi_clk 
+    Info (332119):    -3.901            -481.969 clk 
+Info (332114): Report Metastability: Found 40 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.752
+Info (332146): Worst-case setup slack is -1.804
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.752            -448.501 ftdi_clk 
-    Info (332119):    -1.563            -302.686 clk 
-Info (332146): Worst-case hold slack is 0.074
+    Info (332119):    -1.804            -309.430 clk 
+    Info (332119):    -1.220            -247.691 ftdi_clk 
+Info (332146): Worst-case hold slack is 0.057
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.074               0.000 ftdi_clk 
-    Info (332119):     0.111               0.000 clk 
-Info (332146): Worst-case recovery slack is -0.584
+    Info (332119):     0.057               0.000 ftdi_clk 
+    Info (332119):     0.145               0.000 clk 
+Info (332146): Worst-case recovery slack is -0.451
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.584            -100.700 clk 
-    Info (332119):    -0.170              -8.099 ftdi_clk 
-Info (332146): Worst-case removal slack is 0.522
+    Info (332119):    -0.451             -14.701 ftdi_clk 
+    Info (332119):    -0.337             -71.571 clk 
+Info (332146): Worst-case removal slack is 0.351
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.522               0.000 ftdi_clk 
-    Info (332119):     0.836               0.000 clk 
+    Info (332119):     0.351               0.000 ftdi_clk 
+    Info (332119):     0.819               0.000 clk 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -554.370 ftdi_clk 
-    Info (332119):    -3.000            -355.567 clk 
-Info (332114): Report Metastability: Found 44 synchronizer chains.
+    Info (332119):    -3.000            -454.492 ftdi_clk 
+    Info (332119):    -3.000            -315.763 clk 
+Info (332114): Report Metastability: Found 40 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4791 megabytes
-    Info: Processing ended: Fri Nov 17 14:06:04 2023
+    Info: Processing ended: Fri Nov 17 15:40:09 2023
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 

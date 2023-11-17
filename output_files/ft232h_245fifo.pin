@@ -106,7 +106,7 @@ VCCA2                        : 34        : power  :                   : 3.0V/3.3
 VCCA1                        : 35        : power  :                   : 3.0V/3.3V :           :                
 VCC_ONE                      : 36        : power  :                   : 3.0V/3.3V :           :                
 VCC_ONE                      : 37        : power  :                   : 3.0V/3.3V :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 38        :        :                   :         : 3         :                
+ftdi_siwu                    : 38        : output : 2.5 V             :         : 3         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 39        :        :                   :         : 3         :                
 VCCIO3                       : 40        : power  :                   : 2.5V    : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 41        :        :                   :         : 3         :                
@@ -153,7 +153,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 81        :        :                   :      
 VCCIO5                       : 82        : power  :                   : 2.5V    : 5         :                
 GND                          : 83        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 84        :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 85        :        :                   :         : 5         :                
+ftdi_resetn                  : 85        : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 86        :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 87        :        :                   :         : 5         :                
 LED[0]                       : 88        : output : 2.5 V             :         : 6         : Y              
@@ -168,7 +168,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 96        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : 97        :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 98        :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 99        :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 100       :        :                   :         : 6         :                
+ftdi_pwrsav                  : 100       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 101       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 102       :        :                   :         : 6         :                
 VCCIO6                       : 103       : power  :                   : 2.5V    : 6         :                
