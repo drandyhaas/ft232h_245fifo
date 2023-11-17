@@ -1,0 +1,12 @@
+Power Analyzer Status : Successful - Fri Nov 17 13:04:46 2023
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Revision Name : ft232h_245fifo
+Top-level Entity Name : fpga_top_ft232h_loopback
+Family : MAX 10
+Device : 10M08SAE144C8G
+Power Models : Final
+Total Thermal Power Dissipation : 116.36 mW
+Core Dynamic Thermal Power Dissipation : 0.00 mW
+Core Static Thermal Power Dissipation : 110.61 mW
+I/O Thermal Power Dissipation : 5.75 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data
