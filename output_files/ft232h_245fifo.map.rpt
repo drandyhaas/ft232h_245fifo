@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ft232h_245fifo
-Fri Nov 17 15:39:44 2023
+Mon Nov 20 11:49:39 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -14,46 +14,61 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. State Machine - |fpga_top_ft232h_tx_mass|tx_specified_len:u_tx_specified_len|state
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Registers Packed Into Inferred Megafunctions
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_rx_fifo_async|altsyncram:buffer_rtl_0|altsyncram_6bc1:auto_generated
- 16. Source assignments for ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_delay_submit:u_tx_fifo_delay_submit|altsyncram:buffer_rtl_0|altsyncram_8dg1:auto_generated
- 17. Source assignments for ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_tx_fifo_async|altsyncram:buffer_rtl_0|altsyncram_ejc1:auto_generated
- 18. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top
- 19. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_1
- 20. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_packing:u_tx_packing
- 21. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_resizing:u_tx_upsizing
- 22. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_tx_fifo_async
- 23. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_2
- 24. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_resizing:u_tx_downsizing
- 25. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_resizing:u_tx_downsizing|axi_stream_downsizing:u_axi_stream_downsizing
- 26. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_delay_submit:u_tx_fifo_delay_submit
- 27. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_3
- 28. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|ftdi_245fifo_fsm:u_ftdi_245fifo_fsm
- 29. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|fifo4:u_rx_fifo4
- 30. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_packing:u_rx_packing
- 31. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_resizing:u_rx_upsizing
- 32. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_rx_fifo_async
- 33. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_resizing:u_rx_downsizing
- 34. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_rx_fifo2
- 35. Parameter Settings for User Entity Instance: clock_beat:u_ftdi_clk_beat
- 36. Parameter Settings for Inferred Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_rx_fifo_async|altsyncram:buffer_rtl_0
- 37. Parameter Settings for Inferred Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_delay_submit:u_tx_fifo_delay_submit|altsyncram:buffer_rtl_0
- 38. Parameter Settings for Inferred Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_tx_fifo_async|altsyncram:buffer_rtl_0
- 39. altsyncram Parameter Settings by Entity Instance
- 40. Port Connectivity Checks: "tx_specified_len:u_tx_specified_len"
- 41. Port Connectivity Checks: "ftdi_245fifo_top:u_ftdi_245fifo_top|fifo4:u_rx_fifo4"
- 42. Port Connectivity Checks: "ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_resizing:u_tx_downsizing"
- 43. Port Connectivity Checks: "ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_resizing:u_tx_upsizing"
- 44. Port Connectivity Checks: "ftdi_245fifo_top:u_ftdi_245fifo_top"
- 45. Post-Synthesis Netlist Statistics for Top Partition
- 46. Elapsed Time Per Partition
- 47. Analysis & Synthesis Messages
- 48. Analysis & Synthesis Suppressed Messages
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |fpga_top_ft232h_tx_mass|tx_specified_len:u_tx_specified_len|state
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Registers Packed Into Inferred Megafunctions
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated
+ 18. Source assignments for tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_f26:rdptr_g1p
+ 19. Source assignments for tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_agb:wrptr_g1p
+ 20. Source assignments for tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|altsyncram_ea01:fifo_ram
+ 21. Source assignments for tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|dffpipe_vu8:rs_brp
+ 22. Source assignments for tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|dffpipe_vu8:rs_bwp
+ 23. Source assignments for tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp
+ 24. Source assignments for tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13
+ 25. Source assignments for tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp
+ 26. Source assignments for tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16
+ 27. Source assignments for tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|cntr_i0d:cntr_b
+ 28. Source assignments for ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_rx_fifo_async|altsyncram:buffer_rtl_0|altsyncram_6bc1:auto_generated
+ 29. Source assignments for ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_delay_submit:u_tx_fifo_delay_submit|altsyncram:buffer_rtl_0|altsyncram_8dg1:auto_generated
+ 30. Source assignments for ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_tx_fifo_async|altsyncram:buffer_rtl_0|altsyncram_ejc1:auto_generated
+ 31. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top
+ 32. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_1
+ 33. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_packing:u_tx_packing
+ 34. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_resizing:u_tx_upsizing
+ 35. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_tx_fifo_async
+ 36. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_2
+ 37. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_resizing:u_tx_downsizing
+ 38. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_resizing:u_tx_downsizing|axi_stream_downsizing:u_axi_stream_downsizing
+ 39. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_delay_submit:u_tx_fifo_delay_submit
+ 40. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_3
+ 41. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|ftdi_245fifo_fsm:u_ftdi_245fifo_fsm
+ 42. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|fifo4:u_rx_fifo4
+ 43. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_packing:u_rx_packing
+ 44. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_resizing:u_rx_upsizing
+ 45. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_rx_fifo_async
+ 46. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_resizing:u_rx_downsizing
+ 47. Parameter Settings for User Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_rx_fifo2
+ 48. Parameter Settings for User Entity Instance: tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component
+ 49. Parameter Settings for User Entity Instance: clock_beat:u_ftdi_clk_beat
+ 50. Parameter Settings for Inferred Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_rx_fifo_async|altsyncram:buffer_rtl_0
+ 51. Parameter Settings for Inferred Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_delay_submit:u_tx_fifo_delay_submit|altsyncram:buffer_rtl_0
+ 52. Parameter Settings for Inferred Entity Instance: ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_tx_fifo_async|altsyncram:buffer_rtl_0
+ 53. altsyncram Parameter Settings by Entity Instance
+ 54. Port Connectivity Checks: "tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst"
+ 55. Port Connectivity Checks: "tx_specified_len:u_tx_specified_len"
+ 56. Port Connectivity Checks: "ftdi_245fifo_top:u_ftdi_245fifo_top|fifo4:u_rx_fifo4"
+ 57. Port Connectivity Checks: "ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_resizing:u_tx_downsizing"
+ 58. Port Connectivity Checks: "ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_resizing:u_tx_upsizing"
+ 59. Port Connectivity Checks: "ftdi_245fifo_top:u_ftdi_245fifo_top"
+ 60. Post-Synthesis Netlist Statistics for Top Partition
+ 61. Elapsed Time Per Partition
+ 62. Analysis & Synthesis Messages
+ 63. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -79,7 +94,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 17 15:39:44 2023       ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 20 11:49:39 2023       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; ft232h_245fifo                              ;
 ; Top-level Entity Name              ; fpga_top_ft232h_tx_mass                     ;
@@ -88,7 +103,7 @@ refer to the applicable agreement for further details.
 ;     Total combinational functions  ; 865                                         ;
 ;     Dedicated logic registers      ; 661                                         ;
 ; Total registers                    ; 661                                         ;
-; Total pins                         ; 22                                          ;
+; Total pins                         ; 23                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 48,128                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -221,6 +236,20 @@ refer to the applicable agreement for further details.
 ; FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/tx_specified_len.v        ; yes             ; User Verilog HDL File        ; C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/tx_specified_len.v        ;         ;
 ; FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/fpga_top_ft232h_tx_mass.v ; yes             ; User Verilog HDL File        ; C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/fpga_top_ft232h_tx_mass.v ;         ;
 ; FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/clock_beat.v              ; yes             ; User Verilog HDL File        ; C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/clock_beat.v              ;         ;
+; ahmed_fifo.v                                                            ; yes             ; User Wizard-Generated File   ; C:/gitwork/master/ft232h_245fifo/ahmed_fifo.v                                                            ;         ;
+; dcfifo_mixed_widths.tdf                                                 ; yes             ; Megafunction                 ; c:/altera/18.0/quartus/libraries/megafunctions/dcfifo_mixed_widths.tdf                                   ;         ;
+; db/dcfifo_7vf1.tdf                                                      ; yes             ; Auto-Generated Megafunction  ; C:/gitwork/master/ft232h_245fifo/db/dcfifo_7vf1.tdf                                                      ;         ;
+; db/a_gray2bin_ira.tdf                                                   ; yes             ; Auto-Generated Megafunction  ; C:/gitwork/master/ft232h_245fifo/db/a_gray2bin_ira.tdf                                                   ;         ;
+; db/a_graycounter_f26.tdf                                                ; yes             ; Auto-Generated Megafunction  ; C:/gitwork/master/ft232h_245fifo/db/a_graycounter_f26.tdf                                                ;         ;
+; db/a_graycounter_agb.tdf                                                ; yes             ; Auto-Generated Megafunction  ; C:/gitwork/master/ft232h_245fifo/db/a_graycounter_agb.tdf                                                ;         ;
+; db/altsyncram_ea01.tdf                                                  ; yes             ; Auto-Generated Megafunction  ; C:/gitwork/master/ft232h_245fifo/db/altsyncram_ea01.tdf                                                  ;         ;
+; db/dffpipe_vu8.tdf                                                      ; yes             ; Auto-Generated Megafunction  ; C:/gitwork/master/ft232h_245fifo/db/dffpipe_vu8.tdf                                                      ;         ;
+; db/alt_synch_pipe_f9l.tdf                                               ; yes             ; Auto-Generated Megafunction  ; C:/gitwork/master/ft232h_245fifo/db/alt_synch_pipe_f9l.tdf                                               ;         ;
+; db/dffpipe_0v8.tdf                                                      ; yes             ; Auto-Generated Megafunction  ; C:/gitwork/master/ft232h_245fifo/db/dffpipe_0v8.tdf                                                      ;         ;
+; db/alt_synch_pipe_g9l.tdf                                               ; yes             ; Auto-Generated Megafunction  ; C:/gitwork/master/ft232h_245fifo/db/alt_synch_pipe_g9l.tdf                                               ;         ;
+; db/dffpipe_1v8.tdf                                                      ; yes             ; Auto-Generated Megafunction  ; C:/gitwork/master/ft232h_245fifo/db/dffpipe_1v8.tdf                                                      ;         ;
+; db/cmpr_3h5.tdf                                                         ; yes             ; Auto-Generated Megafunction  ; C:/gitwork/master/ft232h_245fifo/db/cmpr_3h5.tdf                                                         ;         ;
+; db/cntr_i0d.tdf                                                         ; yes             ; Auto-Generated Megafunction  ; C:/gitwork/master/ft232h_245fifo/db/cntr_i0d.tdf                                                         ;         ;
 ; altsyncram.tdf                                                          ; yes             ; Megafunction                 ; c:/altera/18.0/quartus/libraries/megafunctions/altsyncram.tdf                                            ;         ;
 ; stratix_ram_block.inc                                                   ; yes             ; Megafunction                 ; c:/altera/18.0/quartus/libraries/megafunctions/stratix_ram_block.inc                                     ;         ;
 ; lpm_mux.inc                                                             ; yes             ; Megafunction                 ; c:/altera/18.0/quartus/libraries/megafunctions/lpm_mux.inc                                               ;         ;
@@ -257,15 +286,15 @@ refer to the applicable agreement for further details.
 ;     -- Dedicated logic registers            ; 661            ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
-; I/O pins                                    ; 22             ;
+; I/O pins                                    ; 23             ;
 ; Total memory bits                           ; 48128          ;
 ;                                             ;                ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; ftdi_clk~input ;
 ; Maximum fan-out                             ; 426            ;
-; Total fan-out                               ; 6454           ;
-; Average fan-out                             ; 3.96           ;
+; Total fan-out                               ; 6455           ;
+; Average fan-out                             ; 3.95           ;
 +---------------------------------------------+----------------+
 
 
@@ -274,7 +303,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node                               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                          ; Entity Name             ; Library Name ;
 +----------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
-; |fpga_top_ft232h_tx_mass                                 ; 865 (0)             ; 661 (3)                   ; 48128       ; 0          ; 0            ; 0       ; 0         ; 22   ; 0            ; 0          ; |fpga_top_ft232h_tx_mass                                                                                                                                     ; fpga_top_ft232h_tx_mass ; work         ;
+; |fpga_top_ft232h_tx_mass                                 ; 865 (0)             ; 661 (3)                   ; 48128       ; 0          ; 0            ; 0       ; 0         ; 23   ; 0            ; 0          ; |fpga_top_ft232h_tx_mass                                                                                                                                     ; fpga_top_ft232h_tx_mass ; work         ;
 ;    |clock_beat:u_ftdi_clk_beat|                          ; 45 (45)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |fpga_top_ft232h_tx_mass|clock_beat:u_ftdi_clk_beat                                                                                                          ; clock_beat              ; work         ;
 ;    |ftdi_245fifo_top:u_ftdi_245fifo_top|                 ; 706 (0)             ; 588 (0)                   ; 48128       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top                                                                                                 ; ftdi_245fifo_top        ; work         ;
 ;       |axi_stream_packing:u_rx_packing|                  ; 36 (36)             ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_packing:u_rx_packing                                                                 ; axi_stream_packing      ; work         ;
@@ -315,6 +344,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
 
 
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                     ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                                         ; IP Include File ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------------------------------+-----------------+
+; Altera ; FIFO         ; 18.0    ; N/A          ; N/A          ; |fpga_top_ft232h_tx_mass|tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst ; ahmed_fifo.v    ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------------------------------+-----------------+
+
+
 Encoding Type:  One-Hot
 +----------------------------------------------------------------------------------------------------+
 ; State Machine - |fpga_top_ft232h_tx_mass|tx_specified_len:u_tx_specified_len|state                 ;
@@ -329,25 +367,133 @@ Encoding Type:  One-Hot
 +----------------+----------------+----------------+----------------+----------------+---------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                          ;
-+--------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
-; Register name                                                                  ; Reason for Removal                                                                         ;
-+--------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
-; ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_packing:u_rx_packing|o_tkeep[0] ; Lost fanout                                                                                ;
-; ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_packing:u_rx_packing|r_tlast    ; Lost fanout                                                                                ;
-; ftdi_245fifo_top:u_ftdi_245fifo_top|resetn_sync:u_resetn_sync_tx|rstn_shift[3] ; Merged with ftdi_245fifo_top:u_ftdi_245fifo_top|resetn_sync:u_resetn_sync_rx|rstn_shift[3] ;
-; ftdi_245fifo_top:u_ftdi_245fifo_top|resetn_sync:u_resetn_sync_tx|rstn_shift[2] ; Merged with ftdi_245fifo_top:u_ftdi_245fifo_top|resetn_sync:u_resetn_sync_rx|rstn_shift[2] ;
-; ftdi_245fifo_top:u_ftdi_245fifo_top|resetn_sync:u_resetn_sync_tx|rstn_shift[1] ; Merged with ftdi_245fifo_top:u_ftdi_245fifo_top|resetn_sync:u_resetn_sync_rx|rstn_shift[1] ;
-; ftdi_245fifo_top:u_ftdi_245fifo_top|resetn_sync:u_resetn_sync_rx|rstn_shift[0] ; Merged with ftdi_245fifo_top:u_ftdi_245fifo_top|resetn_sync:u_resetn_sync_tx|rstn_shift[0] ;
-; ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_1|data1[8]                ; Merged with ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_1|data1[24]               ;
-; ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_1|data2[8]                ; Merged with ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_1|data2[24]               ;
-; ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_1|data2[16]               ; Merged with ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_1|data2[0]                ;
-; ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_1|data1[0]                ; Merged with ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_1|data1[16]               ;
-; tx_specified_len:u_tx_specified_len|state~8                                    ; Lost fanout                                                                                ;
-; tx_specified_len:u_tx_specified_len|state~9                                    ; Lost fanout                                                                                ;
-; Total Number of Removed Registers = 12                                         ;                                                                                            ;
-+--------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                                                                                                                   ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+; Register name                                                                                                                                                                                           ; Reason for Removal                                                                         ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe15a[0] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe14a[0] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|delayed_wrptr_g[0]                                          ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe15a[1] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe14a[1] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|delayed_wrptr_g[1]                                          ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe15a[2] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe14a[2] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|delayed_wrptr_g[2]                                          ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe15a[3] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe14a[3] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|delayed_wrptr_g[3]                                          ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe15a[4] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe14a[4] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|delayed_wrptr_g[4]                                          ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe15a[5] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe14a[5] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|delayed_wrptr_g[5]                                          ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe15a[6] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe14a[6] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|delayed_wrptr_g[6]                                          ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe18a[0] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe17a[0] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|rdptr_g[0]                                                  ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe18a[1] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe17a[1] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|rdptr_g[1]                                                  ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe18a[2] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe17a[2] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|rdptr_g[2]                                                  ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe18a[3] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe17a[3] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|rdptr_g[3]                                                  ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe18a[4] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe17a[4] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|rdptr_g[4]                                                  ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe18a[5] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe17a[5] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|rdptr_g[5]                                                  ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe18a[6] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe17a[6] ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|rdptr_g[6]                                                  ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|wrptr_g[0..11]                                              ; Stuck at GND due to stuck port clock                                                       ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|cntr_i0d:cntr_b|counter_reg_bit1                            ; Stuck at GND due to stuck port clock                                                       ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|cntr_i0d:cntr_b|counter_reg_bit2                            ; Stuck at GND due to stuck port clock                                                       ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|cntr_i0d:cntr_b|counter_reg_bit3                            ; Stuck at GND due to stuck port clock                                                       ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|cntr_i0d:cntr_b|counter_reg_bit4                            ; Stuck at GND due to stuck port clock                                                       ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_agb:wrptr_g1p|counter10a[0..6]                ; Stuck at GND due to stuck port clock                                                       ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_agb:wrptr_g1p|parity8                         ; Stuck at GND due to stuck port clock                                                       ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_agb:wrptr_g1p|sub_parity9a0                   ; Stuck at VCC due to stuck port clock                                                       ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_agb:wrptr_g1p|sub_parity9a1                   ; Stuck at GND due to stuck port clock                                                       ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|cntr_i0d:cntr_b|counter_reg_bit0                            ; Stuck at VCC due to stuck port clock                                                       ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_f26:rdptr_g1p|counter5a0                      ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_f26:rdptr_g1p|counter5a1                      ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_f26:rdptr_g1p|counter5a2                      ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_f26:rdptr_g1p|counter5a3                      ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_f26:rdptr_g1p|counter5a4                      ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_f26:rdptr_g1p|counter5a5                      ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_f26:rdptr_g1p|counter5a6                      ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_f26:rdptr_g1p|parity6                         ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_f26:rdptr_g1p|sub_parity7a[0,1]               ; Lost fanout                                                                                ;
+; ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_packing:u_rx_packing|o_tkeep[0]                                                                                                                          ; Lost fanout                                                                                ;
+; ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_packing:u_rx_packing|r_tlast                                                                                                                             ; Lost fanout                                                                                ;
+; ftdi_245fifo_top:u_ftdi_245fifo_top|resetn_sync:u_resetn_sync_tx|rstn_shift[3]                                                                                                                          ; Merged with ftdi_245fifo_top:u_ftdi_245fifo_top|resetn_sync:u_resetn_sync_rx|rstn_shift[3] ;
+; ftdi_245fifo_top:u_ftdi_245fifo_top|resetn_sync:u_resetn_sync_tx|rstn_shift[2]                                                                                                                          ; Merged with ftdi_245fifo_top:u_ftdi_245fifo_top|resetn_sync:u_resetn_sync_rx|rstn_shift[2] ;
+; ftdi_245fifo_top:u_ftdi_245fifo_top|resetn_sync:u_resetn_sync_tx|rstn_shift[1]                                                                                                                          ; Merged with ftdi_245fifo_top:u_ftdi_245fifo_top|resetn_sync:u_resetn_sync_rx|rstn_shift[1] ;
+; ftdi_245fifo_top:u_ftdi_245fifo_top|resetn_sync:u_resetn_sync_rx|rstn_shift[0]                                                                                                                          ; Merged with ftdi_245fifo_top:u_ftdi_245fifo_top|resetn_sync:u_resetn_sync_tx|rstn_shift[0] ;
+; ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_1|data1[8]                                                                                                                                         ; Merged with ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_1|data1[24]               ;
+; ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_1|data2[8]                                                                                                                                         ; Merged with ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_1|data2[24]               ;
+; ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_1|data2[16]                                                                                                                                        ; Merged with ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_1|data2[0]                ;
+; ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_1|data1[0]                                                                                                                                         ; Merged with ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_1|data1[16]               ;
+; tx_specified_len:u_tx_specified_len|state~8                                                                                                                                                             ; Lost fanout                                                                                ;
+; tx_specified_len:u_tx_specified_len|state~9                                                                                                                                                             ; Lost fanout                                                                                ;
+; Total Number of Removed Registers = 91                                                                                                                                                                  ;                                                                                            ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                                                                                                                                                                                                                                                                  ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Register name                                                                                                                                                                                           ; Reason for Removal      ; Registers Removed due to This Register                                                                                                                                                                   ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe18a[0] ; Lost Fanouts            ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe17a[0], ;
+;                                                                                                                                                                                                         ;                         ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|rdptr_g[0],                                                  ;
+;                                                                                                                                                                                                         ;                         ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_f26:rdptr_g1p|counter5a0                       ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe18a[1] ; Lost Fanouts            ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe17a[1], ;
+;                                                                                                                                                                                                         ;                         ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|rdptr_g[1],                                                  ;
+;                                                                                                                                                                                                         ;                         ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_f26:rdptr_g1p|counter5a1                       ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe18a[2] ; Lost Fanouts            ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe17a[2], ;
+;                                                                                                                                                                                                         ;                         ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|rdptr_g[2],                                                  ;
+;                                                                                                                                                                                                         ;                         ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_f26:rdptr_g1p|counter5a2                       ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe18a[3] ; Lost Fanouts            ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe17a[3], ;
+;                                                                                                                                                                                                         ;                         ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|rdptr_g[3],                                                  ;
+;                                                                                                                                                                                                         ;                         ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_f26:rdptr_g1p|counter5a3                       ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe18a[4] ; Lost Fanouts            ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe17a[4], ;
+;                                                                                                                                                                                                         ;                         ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|rdptr_g[4],                                                  ;
+;                                                                                                                                                                                                         ;                         ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_f26:rdptr_g1p|counter5a4                       ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe18a[5] ; Lost Fanouts            ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe17a[5], ;
+;                                                                                                                                                                                                         ;                         ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|rdptr_g[5],                                                  ;
+;                                                                                                                                                                                                         ;                         ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_f26:rdptr_g1p|counter5a5                       ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe18a[6] ; Lost Fanouts            ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16|dffe17a[6], ;
+;                                                                                                                                                                                                         ;                         ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|rdptr_g[6],                                                  ;
+;                                                                                                                                                                                                         ;                         ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_f26:rdptr_g1p|counter5a6                       ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe15a[0] ; Lost Fanouts            ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe14a[0], ;
+;                                                                                                                                                                                                         ;                         ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|delayed_wrptr_g[0]                                           ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe15a[1] ; Lost Fanouts            ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe14a[1], ;
+;                                                                                                                                                                                                         ;                         ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|delayed_wrptr_g[1]                                           ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe15a[2] ; Lost Fanouts            ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe14a[2], ;
+;                                                                                                                                                                                                         ;                         ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|delayed_wrptr_g[2]                                           ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe15a[3] ; Lost Fanouts            ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe14a[3], ;
+;                                                                                                                                                                                                         ;                         ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|delayed_wrptr_g[3]                                           ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe15a[4] ; Lost Fanouts            ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe14a[4], ;
+;                                                                                                                                                                                                         ;                         ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|delayed_wrptr_g[4]                                           ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe15a[5] ; Lost Fanouts            ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe14a[5], ;
+;                                                                                                                                                                                                         ;                         ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|delayed_wrptr_g[5]                                           ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe15a[6] ; Lost Fanouts            ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13|dffe14a[6], ;
+;                                                                                                                                                                                                         ;                         ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|delayed_wrptr_g[6]                                           ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_agb:wrptr_g1p|counter10a[6]                   ; Stuck at GND            ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_agb:wrptr_g1p|sub_parity9a1                    ;
+;                                                                                                                                                                                                         ; due to stuck port clock ;                                                                                                                                                                                                          ;
+; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_agb:wrptr_g1p|counter10a[3]                   ; Stuck at GND            ; tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_agb:wrptr_g1p|sub_parity9a0                    ;
+;                                                                                                                                                                                                         ; due to stuck port clock ;                                                                                                                                                                                                          ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -425,6 +571,118 @@ Encoding Type:  One-Hot
 ; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_packing:u_tx_packing|i_bytes[14]                                                    ;
 ; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_packing:u_tx_packing|i_bytes[7]                                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated ;
++---------------------------------------+-------+------+-------------------------------------------------------------------------------------------------------------+
+; Assignment                            ; Value ; From ; To                                                                                                          ;
++---------------------------------------+-------+------+-------------------------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION       ; OFF   ; -    ; -                                                                                                           ;
+; REMOVE_DUPLICATE_REGISTERS            ; OFF   ; -    ; -                                                                                                           ;
+; SYNCHRONIZER_IDENTIFICATION           ; OFF   ; -    ; -                                                                                                           ;
+; SYNCHRONIZATION_REGISTER_CHAIN_LENGTH ; 2     ; -    ; -                                                                                                           ;
++---------------------------------------+-------+------+-------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_f26:rdptr_g1p ;
++----------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment     ; Value ; From ; To                                                                                                                                                             ;
++----------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; POWER_UP_LEVEL ; HIGH  ; -    ; counter5a0                                                                                                                                                     ;
+; POWER_UP_LEVEL ; HIGH  ; -    ; parity6                                                                                                                                                        ;
++----------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_agb:wrptr_g1p ;
++----------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment     ; Value ; From ; To                                                                                                                                                             ;
++----------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; POWER_UP_LEVEL ; HIGH  ; -    ; sub_parity9a0                                                                                                                                                  ;
+; POWER_UP_LEVEL ; LOW   ; -    ; parity8                                                                                                                                                        ;
++----------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|altsyncram_ea01:fifo_ram ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                                                            ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                                                             ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|dffpipe_vu8:rs_brp ;
++---------------------------------+-------+------+--------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                                                                   ;
++---------------------------------+-------+------+--------------------------------------------------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                                                                    ;
++---------------------------------+-------+------+--------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|dffpipe_vu8:rs_bwp ;
++---------------------------------+-------+------+--------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                                                                   ;
++---------------------------------+-------+------+--------------------------------------------------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                                                                    ;
++---------------------------------+-------+------+--------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp ;
++-----------------------------+------------------------+------+---------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                  ; Value                  ; From ; To                                                                                                                              ;
++-----------------------------+------------------------+------+---------------------------------------------------------------------------------------------------------------------------------+
+; X_ON_VIOLATION_OPTION       ; OFF                    ; -    ; -                                                                                                                               ;
+; SYNCHRONIZER_IDENTIFICATION ; FORCED_IF_ASYNCHRONOUS ; -    ; -                                                                                                                               ;
+; PRESERVE_REGISTER           ; ON                     ; -    ; -                                                                                                                               ;
+; DONT_MERGE_REGISTER         ; ON                     ; -    ; -                                                                                                                               ;
+; ADV_NETLIST_OPT_ALLOWED     ; NEVER_ALLOW            ; -    ; -                                                                                                                               ;
++-----------------------------+------------------------+------+---------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13 ;
++---------------------------------+-------+------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                                                                                                 ;
++---------------------------------+-------+------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                                                                                                  ;
++---------------------------------+-------+------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp ;
++-----------------------------+------------------------+------+---------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                  ; Value                  ; From ; To                                                                                                                              ;
++-----------------------------+------------------------+------+---------------------------------------------------------------------------------------------------------------------------------+
+; X_ON_VIOLATION_OPTION       ; OFF                    ; -    ; -                                                                                                                               ;
+; SYNCHRONIZER_IDENTIFICATION ; FORCED_IF_ASYNCHRONOUS ; -    ; -                                                                                                                               ;
+; PRESERVE_REGISTER           ; ON                     ; -    ; -                                                                                                                               ;
+; DONT_MERGE_REGISTER         ; ON                     ; -    ; -                                                                                                                               ;
+; ADV_NETLIST_OPT_ALLOWED     ; NEVER_ALLOW            ; -    ; -                                                                                                                               ;
++-----------------------------+------------------------+------+---------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16 ;
++---------------------------------+-------+------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                                                                                                 ;
++---------------------------------+-------+------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                                                                                                  ;
++---------------------------------+-------+------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|cntr_i0d:cntr_b ;
++----------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment     ; Value ; From ; To                                                                                                                                                 ;
++----------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; POWER_UP_LEVEL ; HIGH  ; -    ; counter_reg_bit0                                                                                                                                   ;
++----------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -636,6 +894,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------------------------------+
 ; DW             ; 10    ; Signed Integer                                                           ;
 +----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component ;
++-------------------------------------------+-------------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name                            ; Value       ; Type                                                                                                ;
++-------------------------------------------+-------------+-----------------------------------------------------------------------------------------------------+
+; ACF_DISABLE_EMBEDDED_TIMING_CONSTRAINT    ; FALSE       ; Untyped                                                                                             ;
+; ACF_DISABLE_MLAB_RAM_USE                  ; FALSE       ; Untyped                                                                                             ;
+; ADD_RAM_OUTPUT_REGISTER                   ; OFF         ; Untyped                                                                                             ;
+; ADD_USEDW_MSB_BIT                         ; OFF         ; Untyped                                                                                             ;
+; CLOCKS_ARE_SYNCHRONIZED                   ; FALSE       ; Untyped                                                                                             ;
+; DELAY_RDUSEDW                             ; 1           ; Untyped                                                                                             ;
+; DELAY_WRUSEDW                             ; 1           ; Untyped                                                                                             ;
+; DISABLE_DCFIFO_EMBEDDED_TIMING_CONSTRAINT ; FALSE       ; Untyped                                                                                             ;
+; ENABLE_ECC                                ; FALSE       ; Untyped                                                                                             ;
+; LPM_NUMWORDS                              ; 2048        ; Signed Integer                                                                                      ;
+; LPM_SHOWAHEAD                             ; OFF         ; Untyped                                                                                             ;
+; LPM_WIDTH                                 ; 1           ; Signed Integer                                                                                      ;
+; LPM_WIDTH_R                               ; 32          ; Signed Integer                                                                                      ;
+; LPM_WIDTHU                                ; 11          ; Signed Integer                                                                                      ;
+; LPM_WIDTHU_R                              ; 6           ; Signed Integer                                                                                      ;
+; MAXIMIZE_SPEED                            ; 5           ; Untyped                                                                                             ;
+; OVERFLOW_CHECKING                         ; ON          ; Untyped                                                                                             ;
+; RAM_BLOCK_TYPE                            ; AUTO        ; Untyped                                                                                             ;
+; RDSYNC_DELAYPIPE                          ; 4           ; Signed Integer                                                                                      ;
+; READ_ACLR_SYNCH                           ; OFF         ; Untyped                                                                                             ;
+; UNDERFLOW_CHECKING                        ; ON          ; Untyped                                                                                             ;
+; USE_EAB                                   ; ON          ; Untyped                                                                                             ;
+; WRITE_ACLR_SYNCH                          ; OFF         ; Untyped                                                                                             ;
+; WRSYNC_DELAYPIPE                          ; 4           ; Signed Integer                                                                                      ;
+; CBXI_PARAMETER                            ; dcfifo_7vf1 ; Untyped                                                                                             ;
++-------------------------------------------+-------------+-----------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -875,6 +1167,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+------------------------------------------------------------------------------------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst"                                             ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                  ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; q       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; rdusedw ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; rdempty ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; wrfull  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------------------+
 ; Port Connectivity Checks: "tx_specified_len:u_tx_specified_len" ;
 +------+-------+----------+---------------------------------------+
@@ -929,7 +1233,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 22                          ;
+; boundary_port         ; 23                          ;
 ; cycloneiii_ff         ; 661                         ;
 ;     CLR               ; 186                         ;
 ;     CLR SCLR          ; 11                          ;
@@ -974,7 +1278,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Fri Nov 17 15:39:29 2023
+    Info: Processing started: Mon Nov 20 11:49:24 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ft232h_245fifo -c ft232h_245fifo
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1002,6 +1306,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file fpga-ft
     Info (12023): Found entity 1: axi_stream_downsizing File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/ftdi_245fifo/axi_stream_downsizing.v Line: 10
 Info (12021): Found 1 design units, including 1 entities, in source file fpga-ftdi245fifo-main/rtl/ftdi_245fifo/axi_stream_assert.v
     Info (12023): Found entity 1: axi_stream_assert File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/ftdi_245fifo/axi_stream_assert.v Line: 10
+Warning (10275): Verilog HDL Module Instantiation warning at tx_specified_len.v(115): ignored dangling comma in List of Port Connections File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/tx_specified_len.v Line: 115
 Info (12021): Found 1 design units, including 1 entities, in source file fpga-ftdi245fifo-main/rtl/fpga_ft232h_example/tx_specified_len.v
     Info (12023): Found entity 1: tx_specified_len File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/tx_specified_len.v Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file fpga-ftdi245fifo-main/rtl/fpga_ft232h_example/rx_calc_crc.v
@@ -1014,8 +1319,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file fpga-ft
     Info (12023): Found entity 1: fpga_top_ft232h_loopback File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/fpga_top_ft232h_loopback.v Line: 12
 Info (12021): Found 1 design units, including 1 entities, in source file fpga-ftdi245fifo-main/rtl/fpga_ft232h_example/clock_beat.v
     Info (12023): Found entity 1: clock_beat File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/clock_beat.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file ahmed_fifo.v
+    Info (12023): Found entity 1: ahmed_fifo File: C:/gitwork/master/ft232h_245fifo/ahmed_fifo.v Line: 39
+Warning (10236): Verilog HDL Implicit Net warning at tx_specified_len.v(106): created implicit net for "ahmed_data" File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/tx_specified_len.v Line: 106
+Warning (10236): Verilog HDL Implicit Net warning at tx_specified_len.v(109): created implicit net for "ahmed_clk" File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/tx_specified_len.v Line: 109
 Info (12127): Elaborating entity "fpga_top_ft232h_tx_mass" for the top level hierarchy
-Info (12128): Elaborating entity "ftdi_245fifo_top" for hierarchy "ftdi_245fifo_top:u_ftdi_245fifo_top" File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/fpga_top_ft232h_tx_mass.v Line: 86
+Info (12128): Elaborating entity "ftdi_245fifo_top" for hierarchy "ftdi_245fifo_top:u_ftdi_245fifo_top" File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/fpga_top_ft232h_tx_mass.v Line: 89
 Info (12128): Elaborating entity "resetn_sync" for hierarchy "ftdi_245fifo_top:u_ftdi_245fifo_top|resetn_sync:u_resetn_sync_usb" File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/ftdi_245fifo/ftdi_245fifo_top.v Line: 98
 Info (12128): Elaborating entity "fifo2" for hierarchy "ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_1" File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/ftdi_245fifo/ftdi_245fifo_top.v Line: 204
 Info (12128): Elaborating entity "axi_stream_packing" for hierarchy "ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_packing:u_tx_packing" File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/ftdi_245fifo/ftdi_245fifo_top.v Line: 223
@@ -1032,9 +1341,65 @@ Info (12128): Elaborating entity "axi_stream_packing" for hierarchy "ftdi_245fif
 Info (12128): Elaborating entity "axi_stream_resizing" for hierarchy "ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_resizing:u_rx_upsizing" File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/ftdi_245fifo/ftdi_245fifo_top.v Line: 400
 Info (12128): Elaborating entity "fifo_async" for hierarchy "ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_rx_fifo_async" File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/ftdi_245fifo/ftdi_245fifo_top.v Line: 417
 Info (12128): Elaborating entity "fifo2" for hierarchy "ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_rx_fifo2" File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/ftdi_245fifo/ftdi_245fifo_top.v Line: 450
-Info (12128): Elaborating entity "tx_specified_len" for hierarchy "tx_specified_len:u_tx_specified_len" File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/fpga_top_ft232h_tx_mass.v Line: 105
+Info (12128): Elaborating entity "tx_specified_len" for hierarchy "tx_specified_len:u_tx_specified_len" File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/fpga_top_ft232h_tx_mass.v Line: 108
 Info (10264): Verilog HDL Case Statement information at tx_specified_len.v(43): all case item expressions in this case statement are onehot File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/tx_specified_len.v Line: 43
-Info (12128): Elaborating entity "clock_beat" for hierarchy "clock_beat:u_ftdi_clk_beat" File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/fpga_top_ft232h_tx_mass.v Line: 133
+Info (12128): Elaborating entity "ahmed_fifo" for hierarchy "tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst" File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/tx_specified_len.v Line: 115
+Info (12128): Elaborating entity "dcfifo_mixed_widths" for hierarchy "tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component" File: C:/gitwork/master/ft232h_245fifo/ahmed_fifo.v Line: 83
+Info (12130): Elaborated megafunction instantiation "tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component" File: C:/gitwork/master/ft232h_245fifo/ahmed_fifo.v Line: 83
+Info (12133): Instantiated megafunction "tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component" with the following parameter: File: C:/gitwork/master/ft232h_245fifo/ahmed_fifo.v Line: 83
+    Info (12134): Parameter "intended_device_family" = "MAX 10"
+    Info (12134): Parameter "lpm_numwords" = "2048"
+    Info (12134): Parameter "lpm_showahead" = "OFF"
+    Info (12134): Parameter "lpm_type" = "dcfifo_mixed_widths"
+    Info (12134): Parameter "lpm_width" = "1"
+    Info (12134): Parameter "lpm_widthu" = "11"
+    Info (12134): Parameter "lpm_widthu_r" = "6"
+    Info (12134): Parameter "lpm_width_r" = "32"
+    Info (12134): Parameter "overflow_checking" = "ON"
+    Info (12134): Parameter "rdsync_delaypipe" = "4"
+    Info (12134): Parameter "underflow_checking" = "ON"
+    Info (12134): Parameter "use_eab" = "ON"
+    Info (12134): Parameter "wrsync_delaypipe" = "4"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dcfifo_7vf1.tdf
+    Info (12023): Found entity 1: dcfifo_7vf1 File: C:/gitwork/master/ft232h_245fifo/db/dcfifo_7vf1.tdf Line: 42
+Info (12128): Elaborating entity "dcfifo_7vf1" for hierarchy "tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated" File: c:/altera/18.0/quartus/libraries/megafunctions/dcfifo_mixed_widths.tdf Line: 78
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_gray2bin_ira.tdf
+    Info (12023): Found entity 1: a_gray2bin_ira File: C:/gitwork/master/ft232h_245fifo/db/a_gray2bin_ira.tdf Line: 22
+Info (12128): Elaborating entity "a_gray2bin_ira" for hierarchy "tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_gray2bin_ira:rdptr_g_gray2bin" File: C:/gitwork/master/ft232h_245fifo/db/dcfifo_7vf1.tdf Line: 56
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_f26.tdf
+    Info (12023): Found entity 1: a_graycounter_f26 File: C:/gitwork/master/ft232h_245fifo/db/a_graycounter_f26.tdf Line: 24
+Info (12128): Elaborating entity "a_graycounter_f26" for hierarchy "tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_f26:rdptr_g1p" File: C:/gitwork/master/ft232h_245fifo/db/dcfifo_7vf1.tdf Line: 58
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_agb.tdf
+    Info (12023): Found entity 1: a_graycounter_agb File: C:/gitwork/master/ft232h_245fifo/db/a_graycounter_agb.tdf Line: 24
+Info (12128): Elaborating entity "a_graycounter_agb" for hierarchy "tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|a_graycounter_agb:wrptr_g1p" File: C:/gitwork/master/ft232h_245fifo/db/dcfifo_7vf1.tdf Line: 59
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ea01.tdf
+    Info (12023): Found entity 1: altsyncram_ea01 File: C:/gitwork/master/ft232h_245fifo/db/altsyncram_ea01.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_ea01" for hierarchy "tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|altsyncram_ea01:fifo_ram" File: C:/gitwork/master/ft232h_245fifo/db/dcfifo_7vf1.tdf Line: 60
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_vu8.tdf
+    Info (12023): Found entity 1: dffpipe_vu8 File: C:/gitwork/master/ft232h_245fifo/db/dffpipe_vu8.tdf Line: 24
+Info (12128): Elaborating entity "dffpipe_vu8" for hierarchy "tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|dffpipe_vu8:rs_brp" File: C:/gitwork/master/ft232h_245fifo/db/dcfifo_7vf1.tdf Line: 64
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_f9l.tdf
+    Info (12023): Found entity 1: alt_synch_pipe_f9l File: C:/gitwork/master/ft232h_245fifo/db/alt_synch_pipe_f9l.tdf Line: 26
+Info (12128): Elaborating entity "alt_synch_pipe_f9l" for hierarchy "tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp" File: C:/gitwork/master/ft232h_245fifo/db/dcfifo_7vf1.tdf Line: 66
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_0v8.tdf
+    Info (12023): Found entity 1: dffpipe_0v8 File: C:/gitwork/master/ft232h_245fifo/db/dffpipe_0v8.tdf Line: 24
+Info (12128): Elaborating entity "dffpipe_0v8" for hierarchy "tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp|dffpipe_0v8:dffpipe13" File: C:/gitwork/master/ft232h_245fifo/db/alt_synch_pipe_f9l.tdf Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_g9l.tdf
+    Info (12023): Found entity 1: alt_synch_pipe_g9l File: C:/gitwork/master/ft232h_245fifo/db/alt_synch_pipe_g9l.tdf Line: 26
+Info (12128): Elaborating entity "alt_synch_pipe_g9l" for hierarchy "tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp" File: C:/gitwork/master/ft232h_245fifo/db/dcfifo_7vf1.tdf Line: 67
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_1v8.tdf
+    Info (12023): Found entity 1: dffpipe_1v8 File: C:/gitwork/master/ft232h_245fifo/db/dffpipe_1v8.tdf Line: 24
+Info (12128): Elaborating entity "dffpipe_1v8" for hierarchy "tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp|dffpipe_1v8:dffpipe16" File: C:/gitwork/master/ft232h_245fifo/db/alt_synch_pipe_g9l.tdf Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_3h5.tdf
+    Info (12023): Found entity 1: cmpr_3h5 File: C:/gitwork/master/ft232h_245fifo/db/cmpr_3h5.tdf Line: 22
+Info (12128): Elaborating entity "cmpr_3h5" for hierarchy "tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|cmpr_3h5:rdempty_eq_comp" File: C:/gitwork/master/ft232h_245fifo/db/dcfifo_7vf1.tdf Line: 71
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_i0d.tdf
+    Info (12023): Found entity 1: cntr_i0d File: C:/gitwork/master/ft232h_245fifo/db/cntr_i0d.tdf Line: 27
+Info (12128): Elaborating entity "cntr_i0d" for hierarchy "tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|cntr_i0d:cntr_b" File: C:/gitwork/master/ft232h_245fifo/db/dcfifo_7vf1.tdf Line: 73
+Info (12128): Elaborating entity "clock_beat" for hierarchy "clock_beat:u_ftdi_clk_beat" File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/fpga_top_ft232h_tx_mass.v Line: 136
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|altsyncram_ea01:fifo_ram|q_b[0]" File: C:/gitwork/master/ft232h_245fifo/db/altsyncram_ea01.tdf Line: 40
 Warning (276027): Inferred dual-clock RAM node "ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_rx_fifo_async|buffer_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Warning (276027): Inferred dual-clock RAM node "ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_tx_fifo_async|buffer_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Info (19000): Inferred 3 megafunctions from design logic
@@ -1139,28 +1504,31 @@ Info (12133): Instantiated megafunction "ftdi_245fifo_top:u_ftdi_245fifo_top|fif
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ejc1.tdf
     Info (12023): Found entity 1: altsyncram_ejc1 File: C:/gitwork/master/ft232h_245fifo/db/altsyncram_ejc1.tdf Line: 27
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13000): Registers with preset signals will power-up high File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/ftdi_245fifo/ftdi_245fifo_fsm.v Line: 97
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "ftdi_resetn" is stuck at VCC File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/fpga_top_ft232h_tx_mass.v Line: 18
-    Warning (13410): Pin "ftdi_pwrsav" is stuck at VCC File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/fpga_top_ft232h_tx_mass.v Line: 19
-    Warning (13410): Pin "ftdi_siwu" is stuck at VCC File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/fpga_top_ft232h_tx_mass.v Line: 20
+    Warning (13410): Pin "ftdi_pwrsav" is stuck at VCC File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/fpga_top_ft232h_tx_mass.v Line: 21
+    Warning (13410): Pin "ftdi_siwu" is stuck at VCC File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/fpga_top_ft232h_tx_mass.v Line: 22
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (17049): 56 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/gitwork/master/ft232h_245fifo/output_files/ft232h_245fifo.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1208 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 10 output pins
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "ahmed_clk" File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/fpga_top_ft232h_tx_mass.v Line: 18
+    Warning (15610): No output dependent on input pin "ahmed_data" File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/fpga_top_ft232h_tx_mass.v Line: 19
+Info (21057): Implemented 1209 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 9 output pins
     Info (21060): Implemented 8 bidirectional pins
     Info (21061): Implemented 1133 logic cells
     Info (21064): Implemented 53 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4799 megabytes
-    Info: Processing ended: Fri Nov 17 15:39:44 2023
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 4787 megabytes
+    Info: Processing ended: Mon Nov 20 11:49:39 2023
     Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Total CPU time (on all processors): 00:00:14
 
 
 +------------------------------------------+

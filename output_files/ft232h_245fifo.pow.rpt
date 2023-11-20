@@ -1,5 +1,5 @@
 Power Analyzer report for ft232h_245fifo
-Fri Nov 17 15:40:04 2023
+Mon Nov 20 11:49:59 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -52,29 +52,29 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.48        ;
+; Average used               ; 1.49        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;  15.9%      ;
+;     Processors 2-4         ;  16.3%      ;
 +----------------------------+-------------+
 
 
 +-------------------------------------------------------------------------------------------+
 ; Power Analyzer Summary                                                                    ;
 +----------------------------------------+--------------------------------------------------+
-; Power Analyzer Status                  ; Successful - Fri Nov 17 15:40:04 2023            ;
+; Power Analyzer Status                  ; Successful - Mon Nov 20 11:49:59 2023            ;
 ; Quartus Prime Version                  ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition      ;
 ; Revision Name                          ; ft232h_245fifo                                   ;
 ; Top-level Entity Name                  ; fpga_top_ft232h_tx_mass                          ;
 ; Family                                 ; MAX 10                                           ;
 ; Device                                 ; 10M08SAE144C8G                                   ;
 ; Power Models                           ; Final                                            ;
-; Total Thermal Power Dissipation        ; 116.37 mW                                        ;
+; Total Thermal Power Dissipation        ; 130.83 mW                                        ;
 ; Core Dynamic Thermal Power Dissipation ; 0.00 mW                                          ;
-; Core Static Thermal Power Dissipation  ; 110.61 mW                                        ;
-; I/O Thermal Power Dissipation          ; 5.76 mW                                          ;
+; Core Static Thermal Power Dissipation  ; 110.65 mW                                        ;
+; I/O Thermal Power Dissipation          ; 20.18 mW                                         ;
 ; Power Estimation Confidence            ; Low: user provided insufficient toggle rate data ;
 +----------------------------------------+--------------------------------------------------+
 
@@ -108,6 +108,8 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------+-----------------------------+
 ; Node                                                                                    ; Reason                      ;
 +-----------------------------------------------------------------------------------------+-----------------------------+
+; ahmed_clk                                                                               ; No valid clock domain found ;
+; ahmed_data                                                                              ; No valid clock domain found ;
 ; ftdi_data[0]                                                                            ; No valid clock domain found ;
 ; ftdi_data[1]                                                                            ; No valid clock domain found ;
 ; ftdi_data[2]                                                                            ; No valid clock domain found ;
@@ -136,10 +138,13 @@ refer to the applicable agreement for further details.
 ; Voltages                                    ;                            ;
 ;     VCCA                                    ; 3.00 V                     ;
 ;     VCC_ONE                                 ; 3.00 V                     ;
+;     3.3-V LVTTL I/O Standard                ; 3.3 V                      ;
 ;     2.5 V I/O Standard                      ; 2.5 V                      ;
+;     1.5 V I/O Standard                      ; 1.5 V                      ;
+;     3.3 V Schmitt Trigger I/O Standard      ; 3.3 V                      ;
 ;     2.5 V Schmitt Trigger I/O Standard      ; 2.5 V                      ;
 ;                                             ;                            ;
-; Auto computed junction temperature          ; 27.1 degrees Celsius       ;
+; Auto computed junction temperature          ; 27.4 degrees Celsius       ;
 ;     Ambient temperature                     ; 25.0 degrees Celsius       ;
 ;     Junction-to-Case thermal resistance     ; 10.90 degrees Celsius/Watt ;
 ;     Case-to-Heat Sink thermal resistance    ; 0.10 degrees Celsius/Watt  ;
@@ -165,45 +170,50 @@ refer to the applicable agreement for further details.
 ; M9K                ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
 ; Combinational cell ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
 ; Register cell      ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
-; I/O                ; 0.13 mW                           ; 0.00 mW                     ; 0.13 mW                        ; 0.00 mW                       ;    0.000                                                  ;
+; I/O                ; 1.14 mW                           ; 0.00 mW                     ; 1.14 mW                        ; 0.00 mW                       ;    0.000                                                  ;
 ; Voltage Regulator  ; 0.00 mW                           ; 0.00 mW                     ; 0.00 mW                        ; --                            ; --                                                        ;
 +--------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
 (1) The "Block Thermal Static Power" for all block types except Pins and the Voltage Regulator, if one exists, is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Thermal Power Dissipation by Hierarchy                                                                                                                                                                                                                                                                                                                                     ;
-+------------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Compilation Hierarchy Node                                 ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                                                                                                                                          ;
-+------------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; |fpga_top_ft232h_tx_mass                                   ; 0.13 mW (0.13 mW)                    ; 0.00 mW (0.00 mW)               ; 0.13 mW (0.13 mW)                 ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass                                                                                                                                     ;
-;     |hard_block:auto_generated_inst                        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|hard_block:auto_generated_inst                                                                                                      ;
-;     |ftdi_245fifo_top:u_ftdi_245fifo_top                   ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top                                                                                                 ;
-;         |ftdi_245fifo_fsm:u_ftdi_245fifo_fsm               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|ftdi_245fifo_fsm:u_ftdi_245fifo_fsm                                                             ;
-;         |resetn_sync:u_resetn_sync_rx                      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|resetn_sync:u_resetn_sync_rx                                                                    ;
-;         |resetn_sync:u_resetn_sync_tx                      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|resetn_sync:u_resetn_sync_tx                                                                    ;
-;         |resetn_sync:u_resetn_sync_usb                     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|resetn_sync:u_resetn_sync_usb                                                                   ;
-;         |fifo2:u_rx_fifo2                                  ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_rx_fifo2                                                                                ;
-;         |fifo4:u_rx_fifo4                                  ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo4:u_rx_fifo4                                                                                ;
-;         |fifo_async:u_rx_fifo_async                        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_rx_fifo_async                                                                      ;
-;             |altsyncram:buffer_rtl_0                       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_rx_fifo_async|altsyncram:buffer_rtl_0                                              ;
-;                 |altsyncram_6bc1:auto_generated            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_rx_fifo_async|altsyncram:buffer_rtl_0|altsyncram_6bc1:auto_generated               ;
-;         |axi_stream_packing:u_rx_packing                   ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_packing:u_rx_packing                                                                 ;
-;         |axi_stream_resizing:u_tx_downsizing               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_resizing:u_tx_downsizing                                                             ;
-;             |axi_stream_downsizing:u_axi_stream_downsizing ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_resizing:u_tx_downsizing|axi_stream_downsizing:u_axi_stream_downsizing               ;
-;         |fifo2:u_tx_fifo2_1                                ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_1                                                                              ;
-;         |fifo2:u_tx_fifo2_2                                ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_2                                                                              ;
-;         |fifo2:u_tx_fifo2_3                                ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_3                                                                              ;
-;         |fifo_async:u_tx_fifo_async                        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_tx_fifo_async                                                                      ;
-;             |altsyncram:buffer_rtl_0                       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_tx_fifo_async|altsyncram:buffer_rtl_0                                              ;
-;                 |altsyncram_ejc1:auto_generated            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_tx_fifo_async|altsyncram:buffer_rtl_0|altsyncram_ejc1:auto_generated               ;
-;         |fifo_delay_submit:u_tx_fifo_delay_submit          ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_delay_submit:u_tx_fifo_delay_submit                                                        ;
-;             |altsyncram:buffer_rtl_0                       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_delay_submit:u_tx_fifo_delay_submit|altsyncram:buffer_rtl_0                                ;
-;                 |altsyncram_8dg1:auto_generated            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_delay_submit:u_tx_fifo_delay_submit|altsyncram:buffer_rtl_0|altsyncram_8dg1:auto_generated ;
-;         |axi_stream_packing:u_tx_packing                   ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_packing:u_tx_packing                                                                 ;
-;     |clock_beat:u_ftdi_clk_beat                            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|clock_beat:u_ftdi_clk_beat                                                                                                          ;
-;     |tx_specified_len:u_tx_specified_len                   ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|tx_specified_len:u_tx_specified_len                                                                                                 ;
-+------------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Hierarchy                                                                                                                                                                                                                                                                                                                                                                            ;
++----------------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Compilation Hierarchy Node                                     ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                                                                                                                                                                             ;
++----------------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |fpga_top_ft232h_tx_mass                                       ; 1.14 mW (1.14 mW)                    ; 0.00 mW (0.00 mW)               ; 1.14 mW (1.14 mW)                 ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass                                                                                                                                                                        ;
+;     |hard_block:auto_generated_inst                            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|hard_block:auto_generated_inst                                                                                                                                         ;
+;     |ftdi_245fifo_top:u_ftdi_245fifo_top                       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top                                                                                                                                    ;
+;         |ftdi_245fifo_fsm:u_ftdi_245fifo_fsm                   ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|ftdi_245fifo_fsm:u_ftdi_245fifo_fsm                                                                                                ;
+;         |resetn_sync:u_resetn_sync_rx                          ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|resetn_sync:u_resetn_sync_rx                                                                                                       ;
+;         |resetn_sync:u_resetn_sync_tx                          ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|resetn_sync:u_resetn_sync_tx                                                                                                       ;
+;         |resetn_sync:u_resetn_sync_usb                         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|resetn_sync:u_resetn_sync_usb                                                                                                      ;
+;         |fifo2:u_rx_fifo2                                      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_rx_fifo2                                                                                                                   ;
+;         |fifo4:u_rx_fifo4                                      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo4:u_rx_fifo4                                                                                                                   ;
+;         |fifo_async:u_rx_fifo_async                            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_rx_fifo_async                                                                                                         ;
+;             |altsyncram:buffer_rtl_0                           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_rx_fifo_async|altsyncram:buffer_rtl_0                                                                                 ;
+;                 |altsyncram_6bc1:auto_generated                ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_rx_fifo_async|altsyncram:buffer_rtl_0|altsyncram_6bc1:auto_generated                                                  ;
+;         |axi_stream_packing:u_rx_packing                       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_packing:u_rx_packing                                                                                                    ;
+;         |axi_stream_resizing:u_tx_downsizing                   ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_resizing:u_tx_downsizing                                                                                                ;
+;             |axi_stream_downsizing:u_axi_stream_downsizing     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_resizing:u_tx_downsizing|axi_stream_downsizing:u_axi_stream_downsizing                                                  ;
+;         |fifo2:u_tx_fifo2_1                                    ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_1                                                                                                                 ;
+;         |fifo2:u_tx_fifo2_2                                    ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_2                                                                                                                 ;
+;         |fifo2:u_tx_fifo2_3                                    ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo2:u_tx_fifo2_3                                                                                                                 ;
+;         |fifo_async:u_tx_fifo_async                            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_tx_fifo_async                                                                                                         ;
+;             |altsyncram:buffer_rtl_0                           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_tx_fifo_async|altsyncram:buffer_rtl_0                                                                                 ;
+;                 |altsyncram_ejc1:auto_generated                ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_tx_fifo_async|altsyncram:buffer_rtl_0|altsyncram_ejc1:auto_generated                                                  ;
+;         |fifo_delay_submit:u_tx_fifo_delay_submit              ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_delay_submit:u_tx_fifo_delay_submit                                                                                           ;
+;             |altsyncram:buffer_rtl_0                           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_delay_submit:u_tx_fifo_delay_submit|altsyncram:buffer_rtl_0                                                                   ;
+;                 |altsyncram_8dg1:auto_generated                ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_delay_submit:u_tx_fifo_delay_submit|altsyncram:buffer_rtl_0|altsyncram_8dg1:auto_generated                                    ;
+;         |axi_stream_packing:u_tx_packing                       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|ftdi_245fifo_top:u_ftdi_245fifo_top|axi_stream_packing:u_tx_packing                                                                                                    ;
+;     |clock_beat:u_ftdi_clk_beat                                ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|clock_beat:u_ftdi_clk_beat                                                                                                                                             ;
+;     |tx_specified_len:u_tx_specified_len                       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|tx_specified_len:u_tx_specified_len                                                                                                                                    ;
+;         |ahmed_fifo:ahmed_fifo_inst                            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst                                                                                                         ;
+;             |dcfifo_mixed_widths:dcfifo_mixed_widths_component ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component                                                       ;
+;                 |dcfifo_7vf1:auto_generated                    ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated                            ;
+;                     |alt_synch_pipe_f9l:rs_dgwp                ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_f9l:rs_dgwp ;
+;                     |alt_synch_pipe_g9l:ws_dgrp                ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fpga_top_ft232h_tx_mass|tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_7vf1:auto_generated|alt_synch_pipe_g9l:ws_dgrp ;
++----------------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 (1) Value in parentheses is the power consumed at that level of hierarchy. Value not in parentheses is the power consumed at that level of hierarchy plus the power consumed by all levels of hierarchy below it.
 
 (2) The "Block Thermal Static Power" for all levels of hierarchy except the top-level hierarchy is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
@@ -223,9 +233,9 @@ refer to the applicable agreement for further details.
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 ; Voltage Supply ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
-; VCCIO          ; 2.33 mA                 ; 0.00 mA                   ; 2.33 mA                  ; 2.33 mA                          ;
+; VCCIO          ; 6.52 mA                 ; 0.00 mA                   ; 6.52 mA                  ; 6.52 mA                          ;
 ; VCCA           ; 0.00 mA                 ; 0.00 mA                   ; 0.00 mA                  ; 0.00 mA                          ;
-; VCC_ONE        ; 36.87 mA                ; 0.00 mA                   ; 36.87 mA                 ; 36.87 mA                         ;
+; VCC_ONE        ; 36.89 mA                ; 0.00 mA                   ; 36.89 mA                 ; 36.89 mA                         ;
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 (1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
 (2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
@@ -238,13 +248,13 @@ refer to the applicable agreement for further details.
 +----------+---------------+---------------------+-----------------------+----------------------+
 ; 1A       ; 2.5V          ; 0.25 mA             ; 0.00 mA               ; 0.25 mA              ;
 ; 1B       ; 2.5V          ; 0.26 mA             ; 0.00 mA               ; 0.26 mA              ;
-; 2        ; 2.5V          ; 0.26 mA             ; 0.00 mA               ; 0.26 mA              ;
+; 2        ; 3.3V          ; 1.64 mA             ; 0.00 mA               ; 1.64 mA              ;
 ; 3        ; 2.5V          ; 0.25 mA             ; 0.00 mA               ; 0.25 mA              ;
 ; 4        ; 2.5V          ; 0.25 mA             ; 0.00 mA               ; 0.25 mA              ;
 ; 5        ; 2.5V          ; 0.25 mA             ; 0.00 mA               ; 0.25 mA              ;
-; 6        ; 2.5V          ; 0.26 mA             ; 0.00 mA               ; 0.26 mA              ;
-; 7        ; 2.5V          ; 0.27 mA             ; 0.00 mA               ; 0.27 mA              ;
-; 8        ; 2.5V          ; 0.28 mA             ; 0.00 mA               ; 0.28 mA              ;
+; 6        ; 1.5V          ; 0.05 mA             ; 0.00 mA               ; 0.05 mA              ;
+; 7        ; 3.3V          ; 1.75 mA             ; 0.00 mA               ; 1.75 mA              ;
+; 8        ; 3.3V          ; 1.82 mA             ; 0.00 mA               ; 1.82 mA              ;
 +----------+---------------+---------------------+-----------------------+----------------------+
 
 
@@ -253,7 +263,9 @@ refer to the applicable agreement for further details.
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 ; VCCIO Voltage ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
-; 2.5V          ; 2.33 mA                 ; 0.00 mA                   ; 2.33 mA                  ; 2.33 mA                          ;
+; 1.5V          ; 0.05 mA                 ; 0.00 mA                   ; 0.05 mA                  ; 0.05 mA                          ;
+; 2.5V          ; 1.26 mA                 ; 0.00 mA                   ; 1.26 mA                  ; 1.26 mA                          ;
+; 3.3V          ; 5.21 mA                 ; 0.00 mA                   ; 5.21 mA                  ; 5.21 mA                          ;
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 (1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
 (2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
@@ -270,19 +282,19 @@ refer to the applicable agreement for further details.
 ;                                                                                        ;              ;            ;              ;               ;
 ; Node, entity or clock assignment                                                       ;              ;            ;              ;               ;
 ;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 0 (0.0%)     ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
-;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 3 (0.2%)     ; 0 (0.0%)   ; 0 (0.0%)     ; 3 (0.2%)      ;
+;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 3 (0.2%)     ; 0 (0.0%)   ; 0 (0.0%)     ; 3 (0.3%)      ;
 ;                                                                                        ;              ;            ;              ;               ;
 ; Vectorless estimation                                                                  ;              ;            ;              ;               ;
-;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 1893 (99.0%) ; 19 (50.0%) ; 661 (100.0%) ; 1213 (100.0%) ;
-;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 40 (2.1%)    ; 4 (10.5%)  ; 8 (1.2%)     ; 28 (2.3%)     ;
-;     -- Number of signals with Static Probability from Vectorless estimation            ; 1890 (98.8%) ; 19 (50.0%) ; 661 (100.0%) ; 1210 (99.8%)  ;
+;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 1878 (98.9%) ; 18 (46.2%) ; 661 (100.0%) ; 1199 (100.0%) ;
+;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 38 (2.0%)    ; 3 (7.7%)   ; 8 (1.2%)     ; 27 (2.3%)     ;
+;     -- Number of signals with Static Probability from Vectorless estimation            ; 1875 (98.7%) ; 18 (46.2%) ; 661 (100.0%) ; 1196 (99.7%)  ;
 ;                                                                                        ;              ;            ;              ;               ;
 ; Default assignment                                                                     ;              ;            ;              ;               ;
 ;     -- Number of signals with Toggle Rate from Default assignment                      ; 0 (0.0%)     ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
-;     -- Number of signals with Static Probability from Default assignment               ; 19 (1.0%)    ; 19 (50.0%) ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Default assignment               ; 21 (1.1%)    ; 21 (53.8%) ; 0 (0.0%)     ; 0 (0.0%)      ;
 ;                                                                                        ;              ;            ;              ;               ;
 ; Assumed 0                                                                              ;              ;            ;              ;               ;
-;     -- Number of signals with Toggle Rate assumed 0                                    ; 19 (1.0%)    ; 19 (50.0%) ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Toggle Rate assumed 0                                    ; 21 (1.1%)    ; 21 (53.8%) ; 0 (0.0%)     ; 0 (0.0%)      ;
 +----------------------------------------------------------------------------------------+--------------+------------+--------------+---------------+
 
 
@@ -300,16 +312,28 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Power Analyzer
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Fri Nov 17 15:40:01 2023
+    Info: Processing started: Mon Nov 20 11:49:56 2023
 Info: Command: quartus_pow --read_settings_files=off --write_settings_files=off ft232h_245fifo -c ft232h_245fifo
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
+Info (332164): Evaluating HDL-embedded SDC commands
+    Info (332165): Entity dcfifo_7vf1
+        Info (332166): set_false_path -from *rdptr_g* -to *ws_dgrp|dffpipe_1v8:dffpipe16|dffe17a* 
+        Info (332166): set_false_path -from *delayed_wrptr_g* -to *rs_dgwp|dffpipe_0v8:dffpipe13|dffe14a* 
+Warning (332173): Ignored filter: *rdptr_g* could not be matched with a clock or keeper or register or port or pin or cell or partition
+Warning (332173): Ignored filter: *ws_dgrp|dffpipe_1v8:dffpipe16|dffe17a* could not be matched with a clock or keeper or register or port or pin or cell or partition
+Warning (332048): Ignored set_false_path: Argument <from> is not an object ID
+Warning (332048): Ignored set_false_path: Argument <to> is not an object ID
+Warning (332173): Ignored filter: *delayed_wrptr_g* could not be matched with a clock or keeper or register or port or pin or cell or partition
+Warning (332173): Ignored filter: *rs_dgwp|dffpipe_0v8:dffpipe13|dffe14a* could not be matched with a clock or keeper or register or port or pin or cell or partition
+Warning (332048): Ignored set_false_path: Argument <from> is not an object ID
+Warning (332048): Ignored set_false_path: Argument <to> is not an object ID
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'ft232h_245fifo.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Warning (332060): Node: ftdi_clk was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register clock_beat:u_ftdi_clk_beat|count[15] is being clocked by ftdi_clk
 Warning (332060): Node: clk was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_tx_fifo_async|wq_wptr_grey[3] is being clocked by clk
+    Info (13166): Register ftdi_245fifo_top:u_ftdi_245fifo_top|fifo_async:u_rx_fifo_async|rq_rptr_grey[1] is being clocked by clk
 Warning (332068): No clocks defined in design.
 Info (223000): Starting Vectorless Power Activity Estimation
 Warning (222013): Relative toggle rates could not be calculated because no clock domain could be identified for some nodes
@@ -319,10 +343,10 @@ Warning (215044): No board thermal model was selected.  Analyzing without board 
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (215049): Average toggle rate for this design is 0.000 millions of transitions / sec
-Info (215031): Total thermal power estimate for the design is 116.37 mW
-Info: Quartus Prime Power Analyzer was successful. 0 errors, 7 warnings
+Info (215031): Total thermal power estimate for the design is 130.83 mW
+Info: Quartus Prime Power Analyzer was successful. 0 errors, 15 warnings
     Info: Peak virtual memory: 4825 megabytes
-    Info: Processing ended: Fri Nov 17 15:40:04 2023
+    Info: Processing ended: Mon Nov 20 11:49:59 2023
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 

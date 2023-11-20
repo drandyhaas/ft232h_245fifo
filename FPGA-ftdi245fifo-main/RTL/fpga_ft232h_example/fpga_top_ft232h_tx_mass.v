@@ -15,7 +15,9 @@ module fpga_top_ft232h_tx_mass (
     output wire  [ 3:0] LED,
     
     // USB2.0 HS (FT232H chip) ------------------------------------------------------------
-    output wire         ftdi_resetn,    // to FT232H's pin34 (RESET#) , !!!!!! UnComment this line if this signal is connected to FPGA !!!!!!
+	 input wire     ahmed_clk,
+	 input wire     ahmed_data,
+	 //output wire         ftdi_resetn,    // to FT232H's pin34 (RESET#) , !!!!!! UnComment this line if this signal is connected to FPGA !!!!!!
     output wire         ftdi_pwrsav,    // to FT232H's pin31 (PWRSAV#), !!!!!! UnComment this line if this signal is connected to FPGA !!!!!!
     output wire         ftdi_siwu,      // to FT232H's pin28 (SIWU#)  , !!!!!! UnComment this line if this signal is connected to FPGA !!!!!!
     input  wire         ftdi_clk,       // to FT232H's pin29 (CLKOUT)
@@ -25,11 +27,12 @@ module fpga_top_ft232h_tx_mass (
     output wire         ftdi_rd_n,      // to FT232H's pin26 (RD#)
     output wire         ftdi_wr_n,      // to FT232H's pin27 (WR#)
     inout        [ 7:0] ftdi_data       // to FT232H's pin20~13 (ADBUS7~ADBUS0)
+
 );
 
 
 
-assign ftdi_resetn = 1'b1;  // 1=normal operation , !!!!!! UnComment this line if this signal is connected to FPGA !!!!!!
+//assign ftdi_resetn = 1'b1;  // 1=normal operation , !!!!!! UnComment this line if this signal is connected to FPGA !!!!!!
 assign ftdi_pwrsav = 1'b1;  // 1=normal operation , !!!!!! UnComment this line if this signal is connected to FPGA !!!!!!
 assign ftdi_siwu   = 1'b1;  // 1=send immidiently , !!!!!! UnComment this line if this signal is connected to FPGA !!!!!!
 

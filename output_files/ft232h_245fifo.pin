@@ -28,13 +28,13 @@
  --                 of its bank.
  --                  Bank 1A:       2.5V
  --                  Bank 1B:       2.5V
- --                  Bank 2:       2.5V
+ --                  Bank 2:       3.3V
  --                  Bank 3:       2.5V
  --                  Bank 4:       2.5V
  --                  Bank 5:       2.5V
- --                  Bank 6:       2.5V
- --                  Bank 7:       2.5V
- --                  Bank 8:       2.5V
+ --                  Bank 6:       1.5V
+ --                  Bank 7:       3.3V
+ --                  Bank 8:       3.3V
  -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
  --                  It can also be used to report unused dedicated pins. The connection
  --                  on the board for unused dedicated pins depends on whether this will
@@ -95,18 +95,18 @@ VCCIO1B                      : 23        : power  :                   : 2.5V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : 24        :        :                   :         : 1B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 25        :        :                   :         : 1B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 26        :        :                   :         : 2         :                
-clk                          : 27        : input  : 2.5 V             :         : 2         : Y              
+clk                          : 27        : input  : 3.3-V LVTTL       :         : 2         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 28        :        :                   :         : 2         :                
-ftdi_data[1]                 : 29        : bidir  : 2.5 V             :         : 2         : Y              
+ftdi_data[1]                 : 29        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 30        :        :                   :         : 2         :                
-VCCIO2                       : 31        : power  :                   : 2.5V    : 2         :                
+VCCIO2                       : 31        : power  :                   : 3.3V    : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 32        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 33        :        :                   :         : 2         :                
 VCCA2                        : 34        : power  :                   : 3.0V/3.3V :           :                
 VCCA1                        : 35        : power  :                   : 3.0V/3.3V :           :                
 VCC_ONE                      : 36        : power  :                   : 3.0V/3.3V :           :                
 VCC_ONE                      : 37        : power  :                   : 3.0V/3.3V :           :                
-ftdi_siwu                    : 38        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 38        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 39        :        :                   :         : 3         :                
 VCCIO3                       : 40        : power  :                   : 2.5V    : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 41        :        :                   :         : 3         :                
@@ -153,62 +153,62 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 81        :        :                   :      
 VCCIO5                       : 82        : power  :                   : 2.5V    : 5         :                
 GND                          : 83        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 84        :        :                   :         : 5         :                
-ftdi_resetn                  : 85        : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 85        :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 86        :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 87        :        :                   :         : 5         :                
-LED[0]                       : 88        : output : 2.5 V             :         : 6         : Y              
-LED[1]                       : 89        : output : 2.5 V             :         : 6         : Y              
-LED[2]                       : 90        : output : 2.5 V             :         : 6         : Y              
-LED[3]                       : 91        : output : 2.5 V             :         : 6         : Y              
+LED[0]                       : 88        : output : 1.5 V             :         : 6         : Y              
+LED[1]                       : 89        : output : 1.5 V             :         : 6         : Y              
+LED[2]                       : 90        : output : 1.5 V             :         : 6         : Y              
+LED[3]                       : 91        : output : 1.5 V             :         : 6         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 92        :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 93        :        :                   :         : 6         :                
-VCCIO6                       : 94        : power  :                   : 2.5V    : 6         :                
+VCCIO6                       : 94        : power  :                   : 1.5V    : 6         :                
 GND                          : 95        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 96        :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 97        :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 98        :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 99        :        :                   :         : 6         :                
-ftdi_pwrsav                  : 100       : output : 2.5 V             :         : 6         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 101       :        :                   :         : 6         :                
+ahmed_clk                    : 100       : input  : 1.5 V             :         : 6         : Y              
+ahmed_data                   : 101       : input  : 1.5 V             :         : 6         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 102       :        :                   :         : 6         :                
-VCCIO6                       : 103       : power  :                   : 2.5V    : 6         :                
+VCCIO6                       : 103       : power  :                   : 1.5V    : 6         :                
 GND                          : 104       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 105       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 106       :        :                   :         : 6         :                
 VCCA3                        : 107       : power  :                   : 3.0V/3.3V :           :                
 VCC_ONE                      : 108       : power  :                   : 3.0V/3.3V :           :                
 VCC_ONE                      : 109       : power  :                   : 3.0V/3.3V :           :                
-ftdi_data[7]                 : 110       : bidir  : 2.5 V             :         : 7         : Y              
-ftdi_data[6]                 : 111       : bidir  : 2.5 V             :         : 7         : Y              
+ftdi_data[7]                 : 110       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
+ftdi_data[6]                 : 111       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 112       :        :                   :         : 7         :                
-ftdi_data[5]                 : 113       : bidir  : 2.5 V             :         : 7         : Y              
-ftdi_data[4]                 : 114       : bidir  : 2.5 V             :         : 7         : Y              
+ftdi_data[5]                 : 113       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
+ftdi_data[4]                 : 114       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
 VCC_ONE                      : 115       : power  :                   : 3.0V/3.3V :           :                
 GND                          : 116       : gnd    :                   :         :           :                
-VCCIO7                       : 117       : power  :                   : 2.5V    : 7         :                
-ftdi_data[3]                 : 118       : bidir  : 2.5 V             :         : 7         : Y              
-ftdi_data[2]                 : 119       : bidir  : 2.5 V             :         : 7         : Y              
+VCCIO7                       : 117       : power  :                   : 3.3V    : 7         :                
+ftdi_data[3]                 : 118       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
+ftdi_data[2]                 : 119       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 120       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 121       :        :                   :         : 8         :                
-ftdi_data[0]                 : 122       : bidir  : 2.5 V             :         : 8         : Y              
+ftdi_data[0]                 : 122       : bidir  : 3.3-V LVTTL       :         : 8         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 123       :        :                   :         : 8         :                
-ftdi_rxf_n                   : 124       : input  : 2.5 V             :         : 8         : Y              
+ftdi_rxf_n                   : 124       : input  : 3.3-V LVTTL       :         : 8         : Y              
 GND                          : 125       : gnd    :                   :         :           :                
-~ALTERA_CONFIG_SEL~ / RESERVED_INPUT : 126       : input  : 2.5 V             :         : 8         : N              
-ftdi_txe_n                   : 127       : input  : 2.5 V             :         : 8         : Y              
-VCCIO8                       : 128       : power  :                   : 2.5V    : 8         :                
-~ALTERA_nCONFIG~ / RESERVED_INPUT : 129       : input  : 2.5 V Schmitt Trigger :         : 8         : N              
-ftdi_rd_n                    : 130       : output : 2.5 V             :         : 8         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 131       :        :                   :         : 8         :                
-ftdi_wr_n                    : 132       : output : 2.5 V             :         : 8         : Y              
+~ALTERA_CONFIG_SEL~ / RESERVED_INPUT : 126       : input  : 3.3-V LVTTL       :         : 8         : N              
+ftdi_txe_n                   : 127       : input  : 3.3-V LVTTL       :         : 8         : Y              
+VCCIO8                       : 128       : power  :                   : 3.3V    : 8         :                
+~ALTERA_nCONFIG~ / RESERVED_INPUT : 129       : input  : 3.3 V Schmitt Trigger :         : 8         : N              
+ftdi_rd_n                    : 130       : output : 3.3-V LVTTL       :         : 8         : Y              
+ftdi_siwu                    : 131       : output : 3.3-V LVTTL       :         : 8         : Y              
+ftdi_wr_n                    : 132       : output : 3.3-V LVTTL       :         : 8         : Y              
 GND                          : 133       : gnd    :                   :         :           :                
-ftdi_clk                     : 134       : input  : 2.5 V             :         : 8         : Y              
-ftdi_oe_n                    : 135       : output : 2.5 V             :         : 8         : Y              
-~ALTERA_nSTATUS~ / RESERVED_INPUT : 136       : input  : 2.5 V Schmitt Trigger :         : 8         : N              
+ftdi_clk                     : 134       : input  : 3.3-V LVTTL       :         : 8         : Y              
+ftdi_oe_n                    : 135       : output : 3.3-V LVTTL       :         : 8         : Y              
+~ALTERA_nSTATUS~ / RESERVED_INPUT : 136       : input  : 3.3 V Schmitt Trigger :         : 8         : N              
 GND                          : 137       : gnd    :                   :         :           :                
-~ALTERA_CONF_DONE~ / RESERVED_INPUT : 138       : input  : 2.5 V Schmitt Trigger :         : 8         : N              
-VCCIO8                       : 139       : power  :                   : 2.5V    : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 140       :        :                   :         : 8         :                
+~ALTERA_CONF_DONE~ / RESERVED_INPUT : 138       : input  : 3.3 V Schmitt Trigger :         : 8         : N              
+VCCIO8                       : 139       : power  :                   : 3.3V    : 8         :                
+ftdi_pwrsav                  : 140       : output : 3.3-V LVTTL       :         : 8         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 141       :        :                   :         : 8         :                
 GND                          : 142       : gnd    :                   :         :           :                
 VCCA4                        : 143       : power  :                   : 3.0V/3.3V :           :                

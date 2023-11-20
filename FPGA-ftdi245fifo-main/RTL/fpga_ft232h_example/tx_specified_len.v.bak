@@ -62,32 +62,26 @@ always @ (posedge clk or negedge rstn)
             end
             
             default :  // TX_DATA :
-                if (o_tready /*&& rdusedw_sig>10*/) begin
+                if (o_tready) begin
                     if (length >= 4) begin
                         length <= length - 4;
-								//rdreq_sig = 1'b1;
-								//o_tvalid = 1'b1;
-								//o_tdata = q_sig;
                     end else begin
                         length <= 0;
                         state <= RX_BYTE0;
                     end
                 end
-					 else begin
-						  //o_tvalid = 1'b0;
-					 end
         endcase
     end
 
 
 assign i_tready = (state != TX_DATA);
 
-assign o_tvalid = (state == TX_DATA); // remove this
+assign o_tvalid = (state == TX_DATA);
 
 assign o_tdata  = {length[7:0] - 8'd4,
                    length[7:0] - 8'd3,
                    length[7:0] - 8'd2,
-                   length[7:0] - 8'd1 }; // remove this
+                   length[7:0] - 8'd1 };
 
 assign o_tkeep  = (length>=4) ? 4'b1111 :
                   (length==3) ? 4'b0111 :
@@ -96,23 +90,6 @@ assign o_tkeep  = (length>=4) ? 4'b1111 :
                  /*length==0*/  4'b0000;
 
 assign o_tlast  = (length>=4) ? 1'b0 : 1'b1;
-
-wire rdreq_sig;
-wire wrreq_sig;
-wire [5:0] rdusedw_sig;
-wire [31:0] q_sig;
-
-ahmed_fifo	ahmed_fifo_inst (
-	.data ( ahmed_data ),
-	.rdclk ( clk ),
-	.rdreq ( rdreq_sig ),
-	.wrclk ( ahmed_clk ),
-	.wrreq ( wrreq_sig ),
-	.q ( q_sig ),
-	//.rdempty ( rdempty_sig ),
-	.rdusedw ( rdusedw_sig ),
-	//.wrfull ( wrfull_sig )
-	);
 
 
 endmodule
