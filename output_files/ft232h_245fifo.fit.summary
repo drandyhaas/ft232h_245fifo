@@ -1,14 +1,14 @@
-Fitter Status : Successful - Mon Nov 20 11:49:52 2023
+Fitter Status : Successful - Mon Nov 20 14:16:59 2023
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : ft232h_245fifo
 Top-level Entity Name : fpga_top_ft232h_tx_mass
 Family : MAX 10
 Device : 10M08SAE144C8G
 Timing Models : Final
-Total logic elements : 998 / 8,064 ( 12 % )
-    Total combinational functions : 868 / 8,064 ( 11 % )
-    Dedicated logic registers : 661 / 8,064 ( 8 % )
-Total registers : 661
+Total logic elements : 917 / 8,064 ( 11 % )
+    Total combinational functions : 785 / 8,064 ( 10 % )
+    Dedicated logic registers : 621 / 8,064 ( 8 % )
+Total registers : 621
 Total pins : 23 / 101 ( 23 % )
 Total virtual pins : 0
 Total memory bits : 48,128 / 387,072 ( 12 % )

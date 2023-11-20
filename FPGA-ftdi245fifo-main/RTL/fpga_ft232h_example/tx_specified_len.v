@@ -11,6 +11,8 @@
 module tx_specified_len (
     input  wire        rstn,
     input  wire        clk,
+	 input  wire        ahmed_clk,
+    input  wire        ahmed_data,
     // AXI-stream slave
     output wire        i_tready,
     input  wire        i_tvalid,
@@ -84,10 +86,10 @@ assign i_tready = (state != TX_DATA);
 
 assign o_tvalid = (state == TX_DATA); // remove this
 
-assign o_tdata  = {length[7:0] - 8'd4,
-                   length[7:0] - 8'd3,
-                   length[7:0] - 8'd2,
-                   length[7:0] - 8'd1 }; // remove this
+assign o_tdata  = {length[7:0],
+                   length[7:0],
+                   7'd0,ahmed_clk,
+                   7'd0,ahmed_data }; // remove this
 
 assign o_tkeep  = (length>=4) ? 4'b1111 :
                   (length==3) ? 4'b0111 :
@@ -110,8 +112,8 @@ ahmed_fifo	ahmed_fifo_inst (
 	.wrreq ( wrreq_sig ),
 	.q ( q_sig ),
 	//.rdempty ( rdempty_sig ),
-	.rdusedw ( rdusedw_sig ),
-	//.wrfull ( wrfull_sig )
+	//.wrfull ( wrfull_sig ),
+	.rdusedw ( rdusedw_sig )
 	);
 
 

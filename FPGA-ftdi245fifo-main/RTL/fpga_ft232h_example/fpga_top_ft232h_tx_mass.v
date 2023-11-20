@@ -97,6 +97,8 @@ ftdi_245fifo_top #(
 tx_specified_len u_tx_specified_len (
     .rstn                  ( 1'b1               ),
     .clk                   ( clk                ),
+	 .ahmed_clk             ( ahmed_clk          ),
+    .ahmed_data            ( ahmed_data         ),
     .i_tready              ( rx_tready          ),
     .i_tvalid              ( rx_tvalid          ),
     .i_tdata               ( rx_tdata           ),

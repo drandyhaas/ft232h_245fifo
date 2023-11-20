@@ -33,7 +33,7 @@ if __name__ == '__main__':
     time_start = time.time()
     
     for i in range (TEST_COUNT) :
-        expect_len = randint(1, 10000000)                                                                           # random a length
+        expect_len = 1000000 #randint(1, 10000000)                                                                           # random a length
         txdata = bytes( [ expect_len&0xff, (expect_len>>8)&0xff, (expect_len>>16)&0xff, (expect_len>>24)&0xff ] )   # convert length number to a 4-byte byte array (with type of 'bytes')
         
         usb.send(txdata)                                                                                            # send the 4 bytes to usb
@@ -41,6 +41,7 @@ if __name__ == '__main__':
         data = usb.recv(expect_len)                                                                                 # recv from usb
         
         rx_len = len(data)
+        print(data[0], data[1])
         
         total_rx_len += rx_len
         time_total = time.time() - time_start
