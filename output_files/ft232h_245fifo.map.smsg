@@ -1,1 +1,2 @@
+Warning (10268): Verilog HDL information at tx_specified_len.v(42): always construct contains both blocking and non-blocking assignments File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/tx_specified_len.v Line: 42
 Warning (10268): Verilog HDL information at rx_calc_crc.v(55): always construct contains both blocking and non-blocking assignments File: C:/gitwork/master/ft232h_245fifo/FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/rx_calc_crc.v Line: 55

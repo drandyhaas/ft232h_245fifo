@@ -1,12 +1,12 @@
-Power Analyzer Status : Successful - Mon Nov 20 14:17:06 2023
+Power Analyzer Status : Successful - Tue Nov 28 16:54:50 2023
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : ft232h_245fifo
 Top-level Entity Name : fpga_top_ft232h_tx_mass
 Family : MAX 10
 Device : 10M08SAE144C8G
 Power Models : Final
-Total Thermal Power Dissipation : 179.74 mW
-Core Dynamic Thermal Power Dissipation : 45.80 mW
-Core Static Thermal Power Dissipation : 110.79 mW
-I/O Thermal Power Dissipation : 23.14 mW
+Total Thermal Power Dissipation : 184.62 mW
+Core Dynamic Thermal Power Dissipation : 50.73 mW
+Core Static Thermal Power Dissipation : 110.81 mW
+I/O Thermal Power Dissipation : 23.08 mW
 Power Estimation Confidence : Low: user provided insufficient toggle rate data

@@ -1,5 +1,5 @@
 Timing Analyzer report for ft232h_245fifo
-Mon Nov 20 14:17:11 2023
+Tue Nov 28 16:54:55 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -94,14 +94,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.45        ;
+; Average used               ; 1.54        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  15.2%      ;
-;     Processor 3            ;  14.8%      ;
-;     Processor 4            ;  14.7%      ;
+;     Processor 2            ;  19.1%      ;
+;     Processor 3            ;  17.7%      ;
+;     Processor 4            ;  17.4%      ;
 +----------------------------+-------------+
 
 
@@ -110,7 +110,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+--------+--------------------------+
 ; SDC File Path                                                       ; Status ; Read at                  ;
 +---------------------------------------------------------------------+--------+--------------------------+
-; FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/constraint_ft232h.sdc ; OK     ; Mon Nov 20 14:17:09 2023 ;
+; FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/constraint_ft232h.sdc ; OK     ; Tue Nov 28 16:54:53 2023 ;
 +---------------------------------------------------------------------+--------+--------------------------+
 
 
@@ -124,25 +124,25 @@ refer to the applicable agreement for further details.
 +------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
 
 
-+--------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary               ;
-+------------+-----------------+------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
-+------------+-----------------+------------+------+
-; 103.89 MHz ; 103.89 MHz      ; ftdi_clk   ;      ;
-; 105.11 MHz ; 105.11 MHz      ; clk        ;      ;
-+------------+-----------------+------------+------+
++-------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary              ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 91.86 MHz ; 91.86 MHz       ; ftdi_clk   ;      ;
+; 93.81 MHz ; 93.81 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
 +-------------------------------------+
 ; Slow 1200mV 85C Model Setup Summary ;
-+----------+--------+-----------------+
-; Clock    ; Slack  ; End Point TNS   ;
-+----------+--------+-----------------+
-; ftdi_clk ; 7.041  ; 0.000           ;
-; clk      ; 10.486 ; 0.000           ;
-+----------+--------+-----------------+
++----------+-------+------------------+
+; Clock    ; Slack ; End Point TNS    ;
++----------+-------+------------------+
+; ftdi_clk ; 5.781 ; 0.000            ;
+; clk      ; 9.340 ; 0.000            ;
++----------+-------+------------------+
 
 
 +------------------------------------+
@@ -150,8 +150,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+-----------------+
 ; Clock    ; Slack ; End Point TNS   ;
 +----------+-------+-----------------+
-; clk      ; 0.305 ; 0.000           ;
-; ftdi_clk ; 0.394 ; 0.000           ;
+; ftdi_clk ; 0.286 ; 0.000           ;
+; clk      ; 0.360 ; 0.000           ;
 +----------+-------+-----------------+
 
 
@@ -160,8 +160,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+--------+--------------------+
 ; Clock    ; Slack  ; End Point TNS      ;
 +----------+--------+--------------------+
-; ftdi_clk ; 11.621 ; 0.000              ;
-; clk      ; 16.781 ; 0.000              ;
+; ftdi_clk ; 12.565 ; 0.000              ;
+; clk      ; 16.486 ; 0.000              ;
 +----------+--------+--------------------+
 
 
@@ -170,8 +170,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+--------------------+
 ; Clock    ; Slack ; End Point TNS      ;
 +----------+-------+--------------------+
-; clk      ; 2.314 ; 0.000              ;
-; ftdi_clk ; 3.110 ; 0.000              ;
+; ftdi_clk ; 1.874 ; 0.000              ;
+; clk      ; 2.542 ; 0.000              ;
 +----------+-------+--------------------+
 
 
@@ -180,42 +180,48 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+--------------------------------+
 ; Clock    ; Slack ; End Point TNS                  ;
 +----------+-------+--------------------------------+
-; ftdi_clk ; 7.955 ; 0.000                          ;
-; clk      ; 9.578 ; 0.000                          ;
+; ftdi_clk ; 7.958 ; 0.000                          ;
+; clk      ; 9.583 ; 0.000                          ;
 +----------+-------+--------------------------------+
 
 
 -----------------------------------------------
 ; Slow 1200mV 85C Model Metastability Summary ;
 -----------------------------------------------
-The design MTBF is not calculated because there are no specified synchronizers in the design.
-Number of Synchronizer Chains Found: 40
+Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+
+Number of Synchronizer Chains Found: 47
 Shortest Synchronizer Chain: 2 Registers
-Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 24.203 ns
+Fraction of Chains for which MTBFs Could Not be Calculated: 0.851
+Worst Case Available Settling Time: 23.244 ns
+
+Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
+  - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.5
+Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
+  - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
 
 
 
-
-+--------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                ;
-+------------+-----------------+------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
-+------------+-----------------+------------+------+
-; 109.78 MHz ; 109.78 MHz      ; ftdi_clk   ;      ;
-; 110.07 MHz ; 110.07 MHz      ; clk        ;      ;
-+------------+-----------------+------------+------+
++-------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary               ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 96.48 MHz ; 96.48 MHz       ; ftdi_clk   ;      ;
+; 99.35 MHz ; 99.35 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
 +------------------------------------+
 ; Slow 1200mV 0C Model Setup Summary ;
-+----------+--------+----------------+
-; Clock    ; Slack  ; End Point TNS  ;
-+----------+--------+----------------+
-; ftdi_clk ; 7.558  ; 0.000          ;
-; clk      ; 10.915 ; 0.000          ;
-+----------+--------+----------------+
++----------+-------+-----------------+
+; Clock    ; Slack ; End Point TNS   ;
++----------+-------+-----------------+
+; ftdi_clk ; 6.302 ; 0.000           ;
+; clk      ; 9.935 ; 0.000           ;
++----------+-------+-----------------+
 
 
 +-----------------------------------+
@@ -223,8 +229,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+----------------+
 ; Clock    ; Slack ; End Point TNS  ;
 +----------+-------+----------------+
-; clk      ; 0.278 ; 0.000          ;
-; ftdi_clk ; 0.352 ; 0.000          ;
+; ftdi_clk ; 0.255 ; 0.000          ;
+; clk      ; 0.322 ; 0.000          ;
 +----------+-------+----------------+
 
 
@@ -233,8 +239,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+--------+-------------------+
 ; Clock    ; Slack  ; End Point TNS     ;
 +----------+--------+-------------------+
-; ftdi_clk ; 11.918 ; 0.000             ;
-; clk      ; 17.048 ; 0.000             ;
+; ftdi_clk ; 12.828 ; 0.000             ;
+; clk      ; 16.758 ; 0.000             ;
 +----------+--------+-------------------+
 
 
@@ -243,8 +249,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+-------------------+
 ; Clock    ; Slack ; End Point TNS     ;
 +----------+-------+-------------------+
-; clk      ; 2.102 ; 0.000             ;
-; ftdi_clk ; 2.789 ; 0.000             ;
+; ftdi_clk ; 1.639 ; 0.000             ;
+; clk      ; 2.292 ; 0.000             ;
 +----------+-------+-------------------+
 
 
@@ -253,20 +259,26 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+-------------------------------+
 ; Clock    ; Slack ; End Point TNS                 ;
 +----------+-------+-------------------------------+
-; ftdi_clk ; 7.817 ; 0.000                         ;
-; clk      ; 9.602 ; 0.000                         ;
+; ftdi_clk ; 7.820 ; 0.000                         ;
+; clk      ; 9.600 ; 0.000                         ;
 +----------+-------+-------------------------------+
 
 
 ----------------------------------------------
 ; Slow 1200mV 0C Model Metastability Summary ;
 ----------------------------------------------
-The design MTBF is not calculated because there are no specified synchronizers in the design.
-Number of Synchronizer Chains Found: 40
-Shortest Synchronizer Chain: 2 Registers
-Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 24.736 ns
+Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 
+Number of Synchronizer Chains Found: 47
+Shortest Synchronizer Chain: 2 Registers
+Fraction of Chains for which MTBFs Could Not be Calculated: 0.851
+Worst Case Available Settling Time: 23.824 ns
+
+Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
+  - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.5
+Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
+  - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
 
 
 
@@ -275,8 +287,8 @@ Worst Case Available Settling Time: 24.736 ns
 +----------+--------+----------------+
 ; Clock    ; Slack  ; End Point TNS  ;
 +----------+--------+----------------+
-; ftdi_clk ; 12.650 ; 0.000          ;
-; clk      ; 16.245 ; 0.000          ;
+; ftdi_clk ; 12.145 ; 0.000          ;
+; clk      ; 15.874 ; 0.000          ;
 +----------+--------+----------------+
 
 
@@ -285,8 +297,8 @@ Worst Case Available Settling Time: 24.736 ns
 +----------+-------+----------------+
 ; Clock    ; Slack ; End Point TNS  ;
 +----------+-------+----------------+
-; clk      ; 0.107 ; 0.000          ;
-; ftdi_clk ; 0.158 ; 0.000          ;
+; ftdi_clk ; 0.064 ; 0.000          ;
+; clk      ; 0.120 ; 0.000          ;
 +----------+-------+----------------+
 
 
@@ -295,8 +307,8 @@ Worst Case Available Settling Time: 24.736 ns
 +----------+--------+-------------------+
 ; Clock    ; Slack  ; End Point TNS     ;
 +----------+--------+-------------------+
-; ftdi_clk ; 14.519 ; 0.000             ;
-; clk      ; 18.545 ; 0.000             ;
+; ftdi_clk ; 14.885 ; 0.000             ;
+; clk      ; 18.428 ; 0.000             ;
 +----------+--------+-------------------+
 
 
@@ -305,8 +317,8 @@ Worst Case Available Settling Time: 24.736 ns
 +----------+-------+-------------------+
 ; Clock    ; Slack ; End Point TNS     ;
 +----------+-------+-------------------+
-; clk      ; 1.012 ; 0.000             ;
-; ftdi_clk ; 1.288 ; 0.000             ;
+; ftdi_clk ; 0.817 ; 0.000             ;
+; clk      ; 1.106 ; 0.000             ;
 +----------+-------+-------------------+
 
 
@@ -315,35 +327,41 @@ Worst Case Available Settling Time: 24.736 ns
 +----------+-------+-------------------------------+
 ; Clock    ; Slack ; End Point TNS                 ;
 +----------+-------+-------------------------------+
-; ftdi_clk ; 7.498 ; 0.000                         ;
-; clk      ; 9.268 ; 0.000                         ;
+; ftdi_clk ; 7.508 ; 0.000                         ;
+; clk      ; 9.270 ; 0.000                         ;
 +----------+-------+-------------------------------+
 
 
 ----------------------------------------------
 ; Fast 1200mV 0C Model Metastability Summary ;
 ----------------------------------------------
-The design MTBF is not calculated because there are no specified synchronizers in the design.
-Number of Synchronizer Chains Found: 40
+Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+
+Number of Synchronizer Chains Found: 47
 Shortest Synchronizer Chain: 2 Registers
-Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 29.496 ns
+Fraction of Chains for which MTBFs Could Not be Calculated: 0.851
+Worst Case Available Settling Time: 29.119 ns
+
+Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
+  - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.5
+Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
+  - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
 
 
 
-
-+------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                          ;
-+------------------+--------+-------+----------+---------+---------------------+
-; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack ; 7.041  ; 0.107 ; 11.621   ; 1.012   ; 7.498               ;
-;  clk             ; 10.486 ; 0.107 ; 16.781   ; 1.012   ; 9.268               ;
-;  ftdi_clk        ; 7.041  ; 0.158 ; 11.621   ; 1.288   ; 7.498               ;
-; Design-wide TNS  ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
-;  clk             ; 0.000  ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
-;  ftdi_clk        ; 0.000  ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
-+------------------+--------+-------+----------+---------+---------------------+
++-----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                         ;
++------------------+-------+-------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 5.781 ; 0.064 ; 12.565   ; 0.817   ; 7.508               ;
+;  clk             ; 9.340 ; 0.120 ; 16.486   ; 1.106   ; 9.270               ;
+;  ftdi_clk        ; 5.781 ; 0.064 ; 12.565   ; 0.817   ; 7.508               ;
+; Design-wide TNS  ; 0.0   ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  clk             ; 0.000 ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
+;  ftdi_clk        ; 0.000 ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
++------------------+-------+-------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -389,8 +407,8 @@ Worst Case Available Settling Time: 29.496 ns
 ; ftdi_clk            ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ftdi_rxf_n          ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ftdi_txe_n          ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
-; ahmed_data          ; 1.5 V                 ; 1200 ps         ; 1200 ps         ;
 ; ahmed_clk           ; 1.5 V                 ; 1200 ps         ; 1200 ps         ;
+; ahmed_data          ; 1.5 V                 ; 1200 ps         ; 1200 ps         ;
 ; ~ALTERA_TMS~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TCK~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TDI~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
@@ -484,10 +502,10 @@ Worst Case Available Settling Time: 29.496 ns
 +------------+----------+------------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+------------+----------+----------+----------+
-; clk        ; clk      ; 16345      ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 22358      ; 0        ; 0        ; 0        ;
 ; ftdi_clk   ; clk      ; false path ; 0        ; 0        ; 0        ;
 ; clk        ; ftdi_clk ; false path ; 0        ; 0        ; 0        ;
-; ftdi_clk   ; ftdi_clk ; 13188      ; 0        ; 0        ; 0        ;
+; ftdi_clk   ; ftdi_clk ; 13186      ; 0        ; 0        ; 0        ;
 +------------+----------+------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -497,10 +515,10 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+------------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+------------+----------+----------+----------+
-; clk        ; clk      ; 16345      ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 22358      ; 0        ; 0        ; 0        ;
 ; ftdi_clk   ; clk      ; false path ; 0        ; 0        ; 0        ;
 ; clk        ; ftdi_clk ; false path ; 0        ; 0        ; 0        ;
-; ftdi_clk   ; ftdi_clk ; 13188      ; 0        ; 0        ; 0        ;
+; ftdi_clk   ; ftdi_clk ; 13186      ; 0        ; 0        ; 0        ;
 +------------+----------+------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -510,7 +528,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 204      ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 248      ; 0        ; 0        ; 0        ;
 ; ftdi_clk   ; ftdi_clk ; 336      ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -521,7 +539,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 204      ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 248      ; 0        ; 0        ; 0        ;
 ; ftdi_clk   ; ftdi_clk ; 336      ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -545,22 +563,23 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Property                        ; Setup ; Hold ;
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
-; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 12    ; 12   ;
-; Unconstrained Input Port Paths  ; 105   ; 105  ;
+; Unconstrained Clocks            ; 1     ; 1    ;
+; Unconstrained Input Ports       ; 11    ; 11   ;
+; Unconstrained Input Port Paths  ; 102   ; 102  ;
 ; Unconstrained Output Ports      ; 15    ; 15   ;
 ; Unconstrained Output Port Paths ; 24    ; 24   ;
 +---------------------------------+-------+------+
 
 
-+------------------------------------------+
-; Clock Status Summary                     ;
-+----------+----------+------+-------------+
-; Target   ; Clock    ; Type ; Status      ;
-+----------+----------+------+-------------+
-; clk      ; clk      ; Base ; Constrained ;
-; ftdi_clk ; ftdi_clk ; Base ; Constrained ;
-+----------+----------+------+-------------+
++---------------------------------------------+
+; Clock Status Summary                        ;
++-----------+----------+------+---------------+
+; Target    ; Clock    ; Type ; Status        ;
++-----------+----------+------+---------------+
+; ahmed_clk ;          ; Base ; Unconstrained ;
+; clk       ; clk      ; Base ; Constrained   ;
+; ftdi_clk  ; ftdi_clk ; Base ; Constrained   ;
++-----------+----------+------+---------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -568,7 +587,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------------+--------------------------------------------------------------------------------------+
 ; Input Port   ; Comment                                                                              ;
 +--------------+--------------------------------------------------------------------------------------+
-; ahmed_clk    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ahmed_data   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ftdi_data[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ftdi_data[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -611,7 +629,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------------+--------------------------------------------------------------------------------------+
 ; Input Port   ; Comment                                                                              ;
 +--------------+--------------------------------------------------------------------------------------+
-; ahmed_clk    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ahmed_data   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ftdi_data[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ftdi_data[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -655,7 +672,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 20 14:17:07 2023
+    Info: Processing started: Tue Nov 28 16:54:52 2023
 Info: Command: quartus_sta ft232h_245fifo -c ft232h_245fifo
 Info: qsta_default_script.tcl version: #2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -663,138 +680,152 @@ Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (332164): Evaluating HDL-embedded SDC commands
-    Info (332165): Entity dcfifo_7vf1
-        Info (332166): set_false_path -from *rdptr_g* -to *ws_dgrp|dffpipe_1v8:dffpipe16|dffe17a* 
-        Info (332166): set_false_path -from *delayed_wrptr_g* -to *rs_dgwp|dffpipe_0v8:dffpipe13|dffe14a* 
-Warning (332174): Ignored filter at qsta_default_script.tcl(1297): *rdptr_g* could not be matched with a clock or keeper or register or port or pin or cell or partition File: C:/altera/18.0/quartus/common/tcl/internal/qsta_default_script.tcl Line: 1297
-Warning (332174): Ignored filter at qsta_default_script.tcl(1297): *ws_dgrp|dffpipe_1v8:dffpipe16|dffe17a* could not be matched with a clock or keeper or register or port or pin or cell or partition File: C:/altera/18.0/quartus/common/tcl/internal/qsta_default_script.tcl Line: 1297
-Warning (332049): Ignored set_false_path at qsta_default_script.tcl(1297): Argument <from> is not an object ID File: C:/altera/18.0/quartus/common/tcl/internal/qsta_default_script.tcl Line: 1297
-    Info (332050): read_sdc File: C:/altera/18.0/quartus/common/tcl/internal/qsta_default_script.tcl Line: 1297
-Warning (332049): Ignored set_false_path at qsta_default_script.tcl(1297): Argument <to> is not an object ID File: C:/altera/18.0/quartus/common/tcl/internal/qsta_default_script.tcl Line: 1297
-Warning (332174): Ignored filter at qsta_default_script.tcl(1297): *delayed_wrptr_g* could not be matched with a clock or keeper or register or port or pin or cell or partition File: C:/altera/18.0/quartus/common/tcl/internal/qsta_default_script.tcl Line: 1297
-Warning (332174): Ignored filter at qsta_default_script.tcl(1297): *rs_dgwp|dffpipe_0v8:dffpipe13|dffe14a* could not be matched with a clock or keeper or register or port or pin or cell or partition File: C:/altera/18.0/quartus/common/tcl/internal/qsta_default_script.tcl Line: 1297
-Warning (332049): Ignored set_false_path at qsta_default_script.tcl(1297): Argument <from> is not an object ID File: C:/altera/18.0/quartus/common/tcl/internal/qsta_default_script.tcl Line: 1297
-    Info (332050): read_sdc File: C:/altera/18.0/quartus/common/tcl/internal/qsta_default_script.tcl Line: 1297
-Warning (332049): Ignored set_false_path at qsta_default_script.tcl(1297): Argument <to> is not an object ID File: C:/altera/18.0/quartus/common/tcl/internal/qsta_default_script.tcl Line: 1297
+    Info (332165): Entity dcfifo_m2i1
+        Info (332166): set_false_path -from *rdptr_g* -to *ws_dgrp|dffpipe_3v8:dffpipe9|dffe10a* 
+        Info (332166): set_false_path -from *delayed_wrptr_g* -to *rs_dgwp|dffpipe_2v8:dffpipe6|dffe7a* 
 Info (332104): Reading SDC File: 'FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/constraint_ft232h.sdc'
+Warning (332060): Node: ahmed_clk was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_m2i1:auto_generated|delayed_wrptr_g[3] is being clocked by ahmed_clk
 Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
     Critical Warning (332169): From clk (Rise) to clk (Rise) (setup and hold)
     Critical Warning (332169): From ftdi_clk (Rise) to ftdi_clk (Rise) (setup and hold)
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
-Info (332146): Worst-case setup slack is 7.041
+Info (332146): Worst-case setup slack is 5.781
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     7.041               0.000 ftdi_clk 
-    Info (332119):    10.486               0.000 clk 
-Info (332146): Worst-case hold slack is 0.305
+    Info (332119):     5.781               0.000 ftdi_clk 
+    Info (332119):     9.340               0.000 clk 
+Info (332146): Worst-case hold slack is 0.286
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.305               0.000 clk 
-    Info (332119):     0.394               0.000 ftdi_clk 
-Info (332146): Worst-case recovery slack is 11.621
+    Info (332119):     0.286               0.000 ftdi_clk 
+    Info (332119):     0.360               0.000 clk 
+Info (332146): Worst-case recovery slack is 12.565
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    11.621               0.000 ftdi_clk 
-    Info (332119):    16.781               0.000 clk 
-Info (332146): Worst-case removal slack is 2.314
+    Info (332119):    12.565               0.000 ftdi_clk 
+    Info (332119):    16.486               0.000 clk 
+Info (332146): Worst-case removal slack is 1.874
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     2.314               0.000 clk 
-    Info (332119):     3.110               0.000 ftdi_clk 
-Info (332146): Worst-case minimum pulse width slack is 7.955
+    Info (332119):     1.874               0.000 ftdi_clk 
+    Info (332119):     2.542               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is 7.958
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     7.955               0.000 ftdi_clk 
-    Info (332119):     9.578               0.000 clk 
-Info (332114): Report Metastability: Found 40 synchronizer chains.
-    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
-    Info (332114): Number of Synchronizer Chains Found: 40
+    Info (332119):     7.958               0.000 ftdi_clk 
+    Info (332119):     9.583               0.000 clk 
+Info (332114): Report Metastability: Found 47 synchronizer chains.
+    Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+    Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+
+    Info (332114): Number of Synchronizer Chains Found: 47
     Info (332114): Shortest Synchronizer Chain: 2 Registers
-    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 24.203 ns
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.851
+    Info (332114): Worst Case Available Settling Time: 23.244 ns
     Info (332114): 
+    Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
+    Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.5
+    Info (332114): Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
+    Info (332114):   - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
+Warning (332060): Node: ahmed_clk was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_m2i1:auto_generated|delayed_wrptr_g[3] is being clocked by ahmed_clk
 Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
     Critical Warning (332169): From clk (Rise) to clk (Rise) (setup and hold)
     Critical Warning (332169): From ftdi_clk (Rise) to ftdi_clk (Rise) (setup and hold)
-Info (332146): Worst-case setup slack is 7.558
+Info (332146): Worst-case setup slack is 6.302
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     7.558               0.000 ftdi_clk 
-    Info (332119):    10.915               0.000 clk 
-Info (332146): Worst-case hold slack is 0.278
+    Info (332119):     6.302               0.000 ftdi_clk 
+    Info (332119):     9.935               0.000 clk 
+Info (332146): Worst-case hold slack is 0.255
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.278               0.000 clk 
-    Info (332119):     0.352               0.000 ftdi_clk 
-Info (332146): Worst-case recovery slack is 11.918
+    Info (332119):     0.255               0.000 ftdi_clk 
+    Info (332119):     0.322               0.000 clk 
+Info (332146): Worst-case recovery slack is 12.828
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    11.918               0.000 ftdi_clk 
-    Info (332119):    17.048               0.000 clk 
-Info (332146): Worst-case removal slack is 2.102
+    Info (332119):    12.828               0.000 ftdi_clk 
+    Info (332119):    16.758               0.000 clk 
+Info (332146): Worst-case removal slack is 1.639
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     2.102               0.000 clk 
-    Info (332119):     2.789               0.000 ftdi_clk 
-Info (332146): Worst-case minimum pulse width slack is 7.817
+    Info (332119):     1.639               0.000 ftdi_clk 
+    Info (332119):     2.292               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is 7.820
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     7.817               0.000 ftdi_clk 
-    Info (332119):     9.602               0.000 clk 
-Info (332114): Report Metastability: Found 40 synchronizer chains.
-    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
-    Info (332114): Number of Synchronizer Chains Found: 40
+    Info (332119):     7.820               0.000 ftdi_clk 
+    Info (332119):     9.600               0.000 clk 
+Info (332114): Report Metastability: Found 47 synchronizer chains.
+    Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+    Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+
+    Info (332114): Number of Synchronizer Chains Found: 47
     Info (332114): Shortest Synchronizer Chain: 2 Registers
-    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 24.736 ns
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.851
+    Info (332114): Worst Case Available Settling Time: 23.824 ns
     Info (332114): 
+    Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
+    Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.5
+    Info (332114): Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
+    Info (332114):   - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
 Info: Analyzing Fast 1200mV 0C Model
+Warning (332060): Node: ahmed_clk was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_m2i1:auto_generated|delayed_wrptr_g[3] is being clocked by ahmed_clk
 Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
     Critical Warning (332169): From clk (Rise) to clk (Rise) (setup and hold)
     Critical Warning (332169): From ftdi_clk (Rise) to ftdi_clk (Rise) (setup and hold)
-Info (332146): Worst-case setup slack is 12.650
+Info (332146): Worst-case setup slack is 12.145
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    12.650               0.000 ftdi_clk 
-    Info (332119):    16.245               0.000 clk 
-Info (332146): Worst-case hold slack is 0.107
+    Info (332119):    12.145               0.000 ftdi_clk 
+    Info (332119):    15.874               0.000 clk 
+Info (332146): Worst-case hold slack is 0.064
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.107               0.000 clk 
-    Info (332119):     0.158               0.000 ftdi_clk 
-Info (332146): Worst-case recovery slack is 14.519
+    Info (332119):     0.064               0.000 ftdi_clk 
+    Info (332119):     0.120               0.000 clk 
+Info (332146): Worst-case recovery slack is 14.885
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    14.519               0.000 ftdi_clk 
-    Info (332119):    18.545               0.000 clk 
-Info (332146): Worst-case removal slack is 1.012
+    Info (332119):    14.885               0.000 ftdi_clk 
+    Info (332119):    18.428               0.000 clk 
+Info (332146): Worst-case removal slack is 0.817
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.012               0.000 clk 
-    Info (332119):     1.288               0.000 ftdi_clk 
-Info (332146): Worst-case minimum pulse width slack is 7.498
+    Info (332119):     0.817               0.000 ftdi_clk 
+    Info (332119):     1.106               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is 7.508
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     7.498               0.000 ftdi_clk 
-    Info (332119):     9.268               0.000 clk 
-Info (332114): Report Metastability: Found 40 synchronizer chains.
-    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
-    Info (332114): Number of Synchronizer Chains Found: 40
+    Info (332119):     7.508               0.000 ftdi_clk 
+    Info (332119):     9.270               0.000 clk 
+Info (332114): Report Metastability: Found 47 synchronizer chains.
+    Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+    Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+
+    Info (332114): Number of Synchronizer Chains Found: 47
     Info (332114): Shortest Synchronizer Chain: 2 Registers
-    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 29.496 ns
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.851
+    Info (332114): Worst Case Available Settling Time: 29.119 ns
     Info (332114): 
+    Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
+    Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.5
+    Info (332114): Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
+    Info (332114):   - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4791 megabytes
-    Info: Processing ended: Mon Nov 20 14:17:11 2023
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 4796 megabytes
+    Info: Processing ended: Tue Nov 28 16:54:55 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:04
 
 
