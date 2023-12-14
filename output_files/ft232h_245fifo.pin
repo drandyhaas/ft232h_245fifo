@@ -156,10 +156,10 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 84        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : 85        :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 86        :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 87        :        :                   :         : 5         :                
-LED[0]                       : 88        : output : 1.5 V             :         : 6         : Y              
-LED[1]                       : 89        : output : 1.5 V             :         : 6         : Y              
-LED[2]                       : 90        : output : 1.5 V             :         : 6         : Y              
-LED[3]                       : 91        : output : 1.5 V             :         : 6         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 88        :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 89        :        :                   :         : 6         :                
+LED                          : 90        : output : 1.5 V             :         : 6         : Y              
+debugout                     : 91        : output : 1.5 V             :         : 6         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 92        :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 93        :        :                   :         : 6         :                
 VCCIO6                       : 94        : power  :                   : 1.5V    : 6         :                
@@ -168,8 +168,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 96        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : 97        :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 98        :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 99        :        :                   :         : 6         :                
-ahmed_clk                    : 100       : input  : 1.5 V             :         : 6         : Y              
-ahmed_data                   : 101       : input  : 1.5 V             :         : 6         : Y              
+ahmed_clk                    : 100       : input  : 1.5 V Schmitt Trigger :         : 6         : Y              
+ahmed_data                   : 101       : input  : 1.5 V Schmitt Trigger :         : 6         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 102       :        :                   :         : 6         :                
 VCCIO6                       : 103       : power  :                   : 1.5V    : 6         :                
 GND                          : 104       : gnd    :                   :         :           :                

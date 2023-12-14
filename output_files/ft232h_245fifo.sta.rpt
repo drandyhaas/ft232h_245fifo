@@ -1,5 +1,5 @@
 Timing Analyzer report for ft232h_245fifo
-Tue Nov 28 16:54:55 2023
+Thu Dec 14 12:42:19 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -94,14 +94,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.54        ;
+; Average used               ; 1.57        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  19.1%      ;
-;     Processor 3            ;  17.7%      ;
-;     Processor 4            ;  17.4%      ;
+;     Processor 2            ;  20.2%      ;
+;     Processor 3            ;  18.5%      ;
+;     Processor 4            ;  18.3%      ;
 +----------------------------+-------------+
 
 
@@ -110,7 +110,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+--------+--------------------------+
 ; SDC File Path                                                       ; Status ; Read at                  ;
 +---------------------------------------------------------------------+--------+--------------------------+
-; FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/constraint_ft232h.sdc ; OK     ; Tue Nov 28 16:54:53 2023 ;
+; FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/constraint_ft232h.sdc ; OK     ; Thu Dec 14 12:42:16 2023 ;
 +---------------------------------------------------------------------+--------+--------------------------+
 
 
@@ -124,14 +124,14 @@ refer to the applicable agreement for further details.
 +------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
 
 
-+-------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary              ;
-+-----------+-----------------+------------+------+
-; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
-+-----------+-----------------+------------+------+
-; 91.86 MHz ; 91.86 MHz       ; ftdi_clk   ;      ;
-; 93.81 MHz ; 93.81 MHz       ; clk        ;      ;
-+-----------+-----------------+------------+------+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 89.34 MHz  ; 89.34 MHz       ; clk        ;      ;
+; 108.01 MHz ; 108.01 MHz      ; ftdi_clk   ;      ;
++------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -140,8 +140,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+------------------+
 ; Clock    ; Slack ; End Point TNS    ;
 +----------+-------+------------------+
-; ftdi_clk ; 5.781 ; 0.000            ;
-; clk      ; 9.340 ; 0.000            ;
+; ftdi_clk ; 7.409 ; 0.000            ;
+; clk      ; 8.807 ; 0.000            ;
 +----------+-------+------------------+
 
 
@@ -150,8 +150,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+-----------------+
 ; Clock    ; Slack ; End Point TNS   ;
 +----------+-------+-----------------+
-; ftdi_clk ; 0.286 ; 0.000           ;
-; clk      ; 0.360 ; 0.000           ;
+; clk      ; 0.259 ; 0.000           ;
+; ftdi_clk ; 0.394 ; 0.000           ;
 +----------+-------+-----------------+
 
 
@@ -160,8 +160,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+--------+--------------------+
 ; Clock    ; Slack  ; End Point TNS      ;
 +----------+--------+--------------------+
-; ftdi_clk ; 12.565 ; 0.000              ;
-; clk      ; 16.486 ; 0.000              ;
+; ftdi_clk ; 12.551 ; 0.000              ;
+; clk      ; 16.222 ; 0.000              ;
 +----------+--------+--------------------+
 
 
@@ -170,8 +170,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+--------------------+
 ; Clock    ; Slack ; End Point TNS      ;
 +----------+-------+--------------------+
-; ftdi_clk ; 1.874 ; 0.000              ;
-; clk      ; 2.542 ; 0.000              ;
+; ftdi_clk ; 1.897 ; 0.000              ;
+; clk      ; 3.191 ; 0.000              ;
 +----------+-------+--------------------+
 
 
@@ -180,8 +180,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+--------------------------------+
 ; Clock    ; Slack ; End Point TNS                  ;
 +----------+-------+--------------------------------+
-; ftdi_clk ; 7.958 ; 0.000                          ;
-; clk      ; 9.583 ; 0.000                          ;
+; ftdi_clk ; 7.949 ; 0.000                          ;
+; clk      ; 9.578 ; 0.000                          ;
 +----------+-------+--------------------------------+
 
 
@@ -191,10 +191,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 
-Number of Synchronizer Chains Found: 47
+Number of Synchronizer Chains Found: 49
 Shortest Synchronizer Chain: 2 Registers
-Fraction of Chains for which MTBFs Could Not be Calculated: 0.851
-Worst Case Available Settling Time: 23.244 ns
+Fraction of Chains for which MTBFs Could Not be Calculated: 0.816
+Worst Case Available Settling Time: 24.888 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.5
@@ -203,14 +203,14 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 
 
 
-+-------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary               ;
-+-----------+-----------------+------------+------+
-; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
-+-----------+-----------------+------------+------+
-; 96.48 MHz ; 96.48 MHz       ; ftdi_clk   ;      ;
-; 99.35 MHz ; 99.35 MHz       ; clk        ;      ;
-+-----------+-----------------+------------+------+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 95.02 MHz  ; 95.02 MHz       ; clk        ;      ;
+; 114.12 MHz ; 114.12 MHz      ; ftdi_clk   ;      ;
++------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -219,8 +219,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+-----------------+
 ; Clock    ; Slack ; End Point TNS   ;
 +----------+-------+-----------------+
-; ftdi_clk ; 6.302 ; 0.000           ;
-; clk      ; 9.935 ; 0.000           ;
+; ftdi_clk ; 7.904 ; 0.000           ;
+; clk      ; 9.476 ; 0.000           ;
 +----------+-------+-----------------+
 
 
@@ -229,8 +229,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+----------------+
 ; Clock    ; Slack ; End Point TNS  ;
 +----------+-------+----------------+
-; ftdi_clk ; 0.255 ; 0.000          ;
-; clk      ; 0.322 ; 0.000          ;
+; clk      ; 0.235 ; 0.000          ;
+; ftdi_clk ; 0.352 ; 0.000          ;
 +----------+-------+----------------+
 
 
@@ -239,8 +239,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+--------+-------------------+
 ; Clock    ; Slack  ; End Point TNS     ;
 +----------+--------+-------------------+
-; ftdi_clk ; 12.828 ; 0.000             ;
-; clk      ; 16.758 ; 0.000             ;
+; ftdi_clk ; 12.808 ; 0.000             ;
+; clk      ; 16.504 ; 0.000             ;
 +----------+--------+-------------------+
 
 
@@ -249,8 +249,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+-------------------+
 ; Clock    ; Slack ; End Point TNS     ;
 +----------+-------+-------------------+
-; ftdi_clk ; 1.639 ; 0.000             ;
-; clk      ; 2.292 ; 0.000             ;
+; ftdi_clk ; 1.628 ; 0.000             ;
+; clk      ; 2.873 ; 0.000             ;
 +----------+-------+-------------------+
 
 
@@ -260,7 +260,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; Clock    ; Slack ; End Point TNS                 ;
 +----------+-------+-------------------------------+
 ; ftdi_clk ; 7.820 ; 0.000                         ;
-; clk      ; 9.600 ; 0.000                         ;
+; clk      ; 9.602 ; 0.000                         ;
 +----------+-------+-------------------------------+
 
 
@@ -270,10 +270,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 
-Number of Synchronizer Chains Found: 47
+Number of Synchronizer Chains Found: 49
 Shortest Synchronizer Chain: 2 Registers
-Fraction of Chains for which MTBFs Could Not be Calculated: 0.851
-Worst Case Available Settling Time: 23.824 ns
+Fraction of Chains for which MTBFs Could Not be Calculated: 0.816
+Worst Case Available Settling Time: 25.363 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.5
@@ -287,8 +287,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +----------+--------+----------------+
 ; Clock    ; Slack  ; End Point TNS  ;
 +----------+--------+----------------+
-; ftdi_clk ; 12.145 ; 0.000          ;
-; clk      ; 15.874 ; 0.000          ;
+; ftdi_clk ; 12.903 ; 0.000          ;
+; clk      ; 15.343 ; 0.000          ;
 +----------+--------+----------------+
 
 
@@ -297,8 +297,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +----------+-------+----------------+
 ; Clock    ; Slack ; End Point TNS  ;
 +----------+-------+----------------+
-; ftdi_clk ; 0.064 ; 0.000          ;
-; clk      ; 0.120 ; 0.000          ;
+; clk      ; 0.095 ; 0.000          ;
+; ftdi_clk ; 0.140 ; 0.000          ;
 +----------+-------+----------------+
 
 
@@ -307,8 +307,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +----------+--------+-------------------+
 ; Clock    ; Slack  ; End Point TNS     ;
 +----------+--------+-------------------+
-; ftdi_clk ; 14.885 ; 0.000             ;
-; clk      ; 18.428 ; 0.000             ;
+; ftdi_clk ; 14.844 ; 0.000             ;
+; clk      ; 18.303 ; 0.000             ;
 +----------+--------+-------------------+
 
 
@@ -317,8 +317,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +----------+-------+-------------------+
 ; Clock    ; Slack ; End Point TNS     ;
 +----------+-------+-------------------+
-; ftdi_clk ; 0.817 ; 0.000             ;
-; clk      ; 1.106 ; 0.000             ;
+; ftdi_clk ; 0.844 ; 0.000             ;
+; clk      ; 1.395 ; 0.000             ;
 +----------+-------+-------------------+
 
 
@@ -327,8 +327,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +----------+-------+-------------------------------+
 ; Clock    ; Slack ; End Point TNS                 ;
 +----------+-------+-------------------------------+
-; ftdi_clk ; 7.508 ; 0.000                         ;
-; clk      ; 9.270 ; 0.000                         ;
+; ftdi_clk ; 7.510 ; 0.000                         ;
+; clk      ; 9.268 ; 0.000                         ;
 +----------+-------+-------------------------------+
 
 
@@ -338,10 +338,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 
-Number of Synchronizer Chains Found: 47
+Number of Synchronizer Chains Found: 49
 Shortest Synchronizer Chain: 2 Registers
-Fraction of Chains for which MTBFs Could Not be Calculated: 0.851
-Worst Case Available Settling Time: 29.119 ns
+Fraction of Chains for which MTBFs Could Not be Calculated: 0.816
+Worst Case Available Settling Time: 29.849 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.5
@@ -355,9 +355,9 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------------+-------+-------+----------+---------+---------------------+
 ; Clock            ; Setup ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+-------+-------+----------+---------+---------------------+
-; Worst-case Slack ; 5.781 ; 0.064 ; 12.565   ; 0.817   ; 7.508               ;
-;  clk             ; 9.340 ; 0.120 ; 16.486   ; 1.106   ; 9.270               ;
-;  ftdi_clk        ; 5.781 ; 0.064 ; 12.565   ; 0.817   ; 7.508               ;
+; Worst-case Slack ; 7.409 ; 0.095 ; 12.551   ; 0.844   ; 7.510               ;
+;  clk             ; 8.807 ; 0.095 ; 16.222   ; 1.395   ; 9.268               ;
+;  ftdi_clk        ; 7.409 ; 0.140 ; 12.551   ; 0.844   ; 7.510               ;
 ; Design-wide TNS  ; 0.0   ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
 ;  clk             ; 0.000 ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
 ;  ftdi_clk        ; 0.000 ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
@@ -369,10 +369,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 ; Pin          ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
 +--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
-; LED[0]       ; 1.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; LED[1]       ; 1.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; LED[2]       ; 1.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; LED[3]       ; 1.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LED          ; 1.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; debugout     ; 1.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ftdi_pwrsav  ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ftdi_siwu    ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ftdi_oe_n    ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -403,12 +401,12 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; ftdi_data[5]        ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ftdi_data[6]        ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ftdi_data[7]        ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
-; clk                 ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ftdi_clk            ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; ahmed_clk           ; 1.5 V Schmitt Trigger ; 1200 ps         ; 1200 ps         ;
 ; ftdi_rxf_n          ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ftdi_txe_n          ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
-; ahmed_clk           ; 1.5 V                 ; 1200 ps         ; 1200 ps         ;
-; ahmed_data          ; 1.5 V                 ; 1200 ps         ; 1200 ps         ;
+; clk                 ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; ahmed_data          ; 1.5 V Schmitt Trigger ; 1200 ps         ; 1200 ps         ;
 ; ~ALTERA_TMS~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TCK~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TDI~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
@@ -424,10 +422,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; LED[0]       ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.37 V                       ; 2.46e-09 V                   ; 1.39 V              ; -0.00763 V          ; 0.038 V                              ; 0.027 V                              ; 4.92e-10 s                  ; 5.4e-10 s                   ; Yes                        ; Yes                        ; 1.37 V                      ; 2.46e-09 V                  ; 1.39 V             ; -0.00763 V         ; 0.038 V                             ; 0.027 V                             ; 4.92e-10 s                 ; 5.4e-10 s                  ; Yes                       ; Yes                       ;
-; LED[1]       ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.37 V                       ; 2.46e-09 V                   ; 1.39 V              ; -0.0077 V           ; 0.038 V                              ; 0.027 V                              ; 4.92e-10 s                  ; 5.41e-10 s                  ; Yes                        ; Yes                        ; 1.37 V                      ; 2.46e-09 V                  ; 1.39 V             ; -0.0077 V          ; 0.038 V                             ; 0.027 V                             ; 4.92e-10 s                 ; 5.41e-10 s                 ; Yes                       ; Yes                       ;
-; LED[2]       ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.37 V                       ; 2.46e-09 V                   ; 1.39 V              ; -0.00763 V          ; 0.038 V                              ; 0.027 V                              ; 4.92e-10 s                  ; 5.4e-10 s                   ; Yes                        ; Yes                        ; 1.37 V                      ; 2.46e-09 V                  ; 1.39 V             ; -0.00763 V         ; 0.038 V                             ; 0.027 V                             ; 4.92e-10 s                 ; 5.4e-10 s                  ; Yes                       ; Yes                       ;
-; LED[3]       ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.37 V                       ; 2.46e-09 V                   ; 1.39 V              ; -0.0077 V           ; 0.038 V                              ; 0.027 V                              ; 4.92e-10 s                  ; 5.41e-10 s                  ; Yes                        ; Yes                        ; 1.37 V                      ; 2.46e-09 V                  ; 1.39 V             ; -0.0077 V          ; 0.038 V                             ; 0.027 V                             ; 4.92e-10 s                 ; 5.41e-10 s                 ; Yes                       ; Yes                       ;
+; LED          ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.37 V                       ; 2.46e-09 V                   ; 1.39 V              ; -0.00763 V          ; 0.038 V                              ; 0.027 V                              ; 4.92e-10 s                  ; 5.4e-10 s                   ; Yes                        ; Yes                        ; 1.37 V                      ; 2.46e-09 V                  ; 1.39 V             ; -0.00763 V         ; 0.038 V                             ; 0.027 V                             ; 4.92e-10 s                 ; 5.4e-10 s                  ; Yes                       ; Yes                       ;
+; debugout     ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.37 V                       ; 2.46e-09 V                   ; 1.39 V              ; -0.0077 V           ; 0.038 V                              ; 0.027 V                              ; 4.92e-10 s                  ; 5.41e-10 s                  ; Yes                        ; Yes                        ; 1.37 V                      ; 2.46e-09 V                  ; 1.39 V             ; -0.0077 V          ; 0.038 V                             ; 0.027 V                             ; 4.92e-10 s                 ; 5.41e-10 s                 ; Yes                       ; Yes                       ;
 ; ftdi_pwrsav  ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.126 V            ; 0.218 V                              ; 0.383 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.126 V           ; 0.218 V                             ; 0.383 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
 ; ftdi_siwu    ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.216 V                              ; 0.383 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.216 V                             ; 0.383 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
 ; ftdi_oe_n    ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.08e-08 V                   ; 3.19 V              ; -0.128 V            ; 0.216 V                              ; 0.383 V                              ; 4.51e-10 s                  ; 4.73e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.08e-08 V                  ; 3.19 V             ; -0.128 V           ; 0.216 V                             ; 0.383 V                             ; 4.51e-10 s                 ; 4.73e-10 s                 ; No                        ; No                        ;
@@ -450,10 +446,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; LED[0]       ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.37 V                       ; 2.43e-07 V                   ; 1.38 V              ; -0.00298 V          ; 0.023 V                              ; 0.007 V                              ; 6.21e-10 s                  ; 6.42e-10 s                  ; Yes                        ; Yes                        ; 1.37 V                      ; 2.43e-07 V                  ; 1.38 V             ; -0.00298 V         ; 0.023 V                             ; 0.007 V                             ; 6.21e-10 s                 ; 6.42e-10 s                 ; Yes                       ; Yes                       ;
-; LED[1]       ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.37 V                       ; 2.43e-07 V                   ; 1.38 V              ; -0.00311 V          ; 0.022 V                              ; 0.007 V                              ; 6.21e-10 s                  ; 6.42e-10 s                  ; Yes                        ; Yes                        ; 1.37 V                      ; 2.43e-07 V                  ; 1.38 V             ; -0.00311 V         ; 0.022 V                             ; 0.007 V                             ; 6.21e-10 s                 ; 6.42e-10 s                 ; Yes                       ; Yes                       ;
-; LED[2]       ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.37 V                       ; 2.43e-07 V                   ; 1.38 V              ; -0.00298 V          ; 0.023 V                              ; 0.007 V                              ; 6.21e-10 s                  ; 6.42e-10 s                  ; Yes                        ; Yes                        ; 1.37 V                      ; 2.43e-07 V                  ; 1.38 V             ; -0.00298 V         ; 0.023 V                             ; 0.007 V                             ; 6.21e-10 s                 ; 6.42e-10 s                 ; Yes                       ; Yes                       ;
-; LED[3]       ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.37 V                       ; 2.43e-07 V                   ; 1.38 V              ; -0.00311 V          ; 0.022 V                              ; 0.007 V                              ; 6.21e-10 s                  ; 6.42e-10 s                  ; Yes                        ; Yes                        ; 1.37 V                      ; 2.43e-07 V                  ; 1.38 V             ; -0.00311 V         ; 0.022 V                             ; 0.007 V                             ; 6.21e-10 s                 ; 6.42e-10 s                 ; Yes                       ; Yes                       ;
+; LED          ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.37 V                       ; 2.43e-07 V                   ; 1.38 V              ; -0.00298 V          ; 0.023 V                              ; 0.007 V                              ; 6.21e-10 s                  ; 6.42e-10 s                  ; Yes                        ; Yes                        ; 1.37 V                      ; 2.43e-07 V                  ; 1.38 V             ; -0.00298 V         ; 0.023 V                             ; 0.007 V                             ; 6.21e-10 s                 ; 6.42e-10 s                 ; Yes                       ; Yes                       ;
+; debugout     ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.37 V                       ; 2.43e-07 V                   ; 1.38 V              ; -0.00311 V          ; 0.022 V                              ; 0.007 V                              ; 6.21e-10 s                  ; 6.42e-10 s                  ; Yes                        ; Yes                        ; 1.37 V                      ; 2.43e-07 V                  ; 1.38 V             ; -0.00311 V         ; 0.022 V                             ; 0.007 V                             ; 6.21e-10 s                 ; 6.42e-10 s                 ; Yes                       ; Yes                       ;
 ; ftdi_pwrsav  ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0682 V           ; 0.279 V                              ; 0.237 V                              ; 4.81e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0682 V          ; 0.279 V                             ; 0.237 V                             ; 4.81e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
 ; ftdi_siwu    ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0684 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0684 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
 ; ftdi_oe_n    ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.3e-06 V                    ; 3.15 V              ; -0.0684 V           ; 0.28 V                               ; 0.237 V                              ; 4.81e-10 s                  ; 6.4e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 1.3e-06 V                   ; 3.15 V             ; -0.0684 V          ; 0.28 V                              ; 0.237 V                             ; 4.81e-10 s                 ; 6.4e-10 s                  ; Yes                       ; No                        ;
@@ -476,10 +470,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; LED[0]       ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.57 V                       ; 2.35e-08 V                   ; 1.63 V              ; -0.0475 V           ; 0.117 V                              ; 0.092 V                              ; 2.7e-10 s                   ; 2.7e-10 s                   ; Yes                        ; Yes                        ; 1.57 V                      ; 2.35e-08 V                  ; 1.63 V             ; -0.0475 V          ; 0.117 V                             ; 0.092 V                             ; 2.7e-10 s                  ; 2.7e-10 s                  ; Yes                       ; Yes                       ;
-; LED[1]       ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.57 V                       ; 2.34e-08 V                   ; 1.63 V              ; -0.0474 V           ; 0.117 V                              ; 0.092 V                              ; 2.7e-10 s                   ; 2.7e-10 s                   ; Yes                        ; Yes                        ; 1.57 V                      ; 2.34e-08 V                  ; 1.63 V             ; -0.0474 V          ; 0.117 V                             ; 0.092 V                             ; 2.7e-10 s                  ; 2.7e-10 s                  ; Yes                       ; Yes                       ;
-; LED[2]       ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.57 V                       ; 2.35e-08 V                   ; 1.63 V              ; -0.0475 V           ; 0.117 V                              ; 0.092 V                              ; 2.7e-10 s                   ; 2.7e-10 s                   ; Yes                        ; Yes                        ; 1.57 V                      ; 2.35e-08 V                  ; 1.63 V             ; -0.0475 V          ; 0.117 V                             ; 0.092 V                             ; 2.7e-10 s                  ; 2.7e-10 s                  ; Yes                       ; Yes                       ;
-; LED[3]       ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.57 V                       ; 2.34e-08 V                   ; 1.63 V              ; -0.0474 V           ; 0.117 V                              ; 0.092 V                              ; 2.7e-10 s                   ; 2.7e-10 s                   ; Yes                        ; Yes                        ; 1.57 V                      ; 2.34e-08 V                  ; 1.63 V             ; -0.0474 V          ; 0.117 V                             ; 0.092 V                             ; 2.7e-10 s                  ; 2.7e-10 s                  ; Yes                       ; Yes                       ;
+; LED          ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.57 V                       ; 2.35e-08 V                   ; 1.63 V              ; -0.0475 V           ; 0.117 V                              ; 0.092 V                              ; 2.7e-10 s                   ; 2.7e-10 s                   ; Yes                        ; Yes                        ; 1.57 V                      ; 2.35e-08 V                  ; 1.63 V             ; -0.0475 V          ; 0.117 V                             ; 0.092 V                             ; 2.7e-10 s                  ; 2.7e-10 s                  ; Yes                       ; Yes                       ;
+; debugout     ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.57 V                       ; 2.34e-08 V                   ; 1.63 V              ; -0.0474 V           ; 0.117 V                              ; 0.092 V                              ; 2.7e-10 s                   ; 2.7e-10 s                   ; Yes                        ; Yes                        ; 1.57 V                      ; 2.34e-08 V                  ; 1.63 V             ; -0.0474 V          ; 0.117 V                             ; 0.092 V                             ; 2.7e-10 s                  ; 2.7e-10 s                  ; Yes                       ; Yes                       ;
 ; ftdi_pwrsav  ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; ftdi_siwu    ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; ftdi_oe_n    ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
@@ -502,10 +494,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------+----------+------------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+------------+----------+----------+----------+
-; clk        ; clk      ; 22358      ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 23763      ; 0        ; 0        ; 0        ;
 ; ftdi_clk   ; clk      ; false path ; 0        ; 0        ; 0        ;
 ; clk        ; ftdi_clk ; false path ; 0        ; 0        ; 0        ;
-; ftdi_clk   ; ftdi_clk ; 13186      ; 0        ; 0        ; 0        ;
+; ftdi_clk   ; ftdi_clk ; 13178      ; 0        ; 0        ; 0        ;
 +------------+----------+------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -515,10 +507,10 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+------------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+------------+----------+----------+----------+
-; clk        ; clk      ; 22358      ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 23763      ; 0        ; 0        ; 0        ;
 ; ftdi_clk   ; clk      ; false path ; 0        ; 0        ; 0        ;
 ; clk        ; ftdi_clk ; false path ; 0        ; 0        ; 0        ;
-; ftdi_clk   ; ftdi_clk ; 13186      ; 0        ; 0        ; 0        ;
+; ftdi_clk   ; ftdi_clk ; 13178      ; 0        ; 0        ; 0        ;
 +------------+----------+------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -566,8 +558,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Clocks            ; 1     ; 1    ;
 ; Unconstrained Input Ports       ; 11    ; 11   ;
 ; Unconstrained Input Port Paths  ; 102   ; 102  ;
-; Unconstrained Output Ports      ; 15    ; 15   ;
-; Unconstrained Output Port Paths ; 24    ; 24   ;
+; Unconstrained Output Ports      ; 13    ; 13   ;
+; Unconstrained Output Port Paths ; 39    ; 39   ;
 +---------------------------------+-------+------+
 
 
@@ -606,10 +598,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------------+---------------------------------------------------------------------------------------+
 ; Output Port  ; Comment                                                                               ;
 +--------------+---------------------------------------------------------------------------------------+
-; LED[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LED[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LED[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LED[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; debugout     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ftdi_data[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ftdi_data[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ftdi_data[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -648,10 +638,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------------+---------------------------------------------------------------------------------------+
 ; Output Port  ; Comment                                                                               ;
 +--------------+---------------------------------------------------------------------------------------+
-; LED[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LED[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LED[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LED[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; debugout     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ftdi_data[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ftdi_data[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ftdi_data[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -672,7 +660,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov 28 16:54:52 2023
+    Info: Processing started: Thu Dec 14 12:42:15 2023
 Info: Command: quartus_sta ft232h_245fifo -c ft232h_245fifo
 Info: qsta_default_script.tcl version: #2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -680,51 +668,51 @@ Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (332164): Evaluating HDL-embedded SDC commands
-    Info (332165): Entity dcfifo_m2i1
-        Info (332166): set_false_path -from *rdptr_g* -to *ws_dgrp|dffpipe_3v8:dffpipe9|dffe10a* 
-        Info (332166): set_false_path -from *delayed_wrptr_g* -to *rs_dgwp|dffpipe_2v8:dffpipe6|dffe7a* 
+    Info (332165): Entity dcfifo_03i1
+        Info (332166): set_false_path -from *rdptr_g* -to *ws_dgrp|dffpipe_6v8:dffpipe16|dffe17a* 
+        Info (332166): set_false_path -from *delayed_wrptr_g* -to *rs_dgwp|dffpipe_5v8:dffpipe13|dffe14a* 
 Info (332104): Reading SDC File: 'FPGA-ftdi245fifo-main/RTL/fpga_ft232h_example/constraint_ft232h.sdc'
 Warning (332060): Node: ahmed_clk was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_m2i1:auto_generated|delayed_wrptr_g[3] is being clocked by ahmed_clk
+    Info (13166): Register tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_03i1:auto_generated|delayed_wrptr_g[1] is being clocked by ahmed_clk
 Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
     Critical Warning (332169): From clk (Rise) to clk (Rise) (setup and hold)
     Critical Warning (332169): From ftdi_clk (Rise) to ftdi_clk (Rise) (setup and hold)
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
-Info (332146): Worst-case setup slack is 5.781
+Info (332146): Worst-case setup slack is 7.409
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     5.781               0.000 ftdi_clk 
-    Info (332119):     9.340               0.000 clk 
-Info (332146): Worst-case hold slack is 0.286
+    Info (332119):     7.409               0.000 ftdi_clk 
+    Info (332119):     8.807               0.000 clk 
+Info (332146): Worst-case hold slack is 0.259
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.286               0.000 ftdi_clk 
-    Info (332119):     0.360               0.000 clk 
-Info (332146): Worst-case recovery slack is 12.565
+    Info (332119):     0.259               0.000 clk 
+    Info (332119):     0.394               0.000 ftdi_clk 
+Info (332146): Worst-case recovery slack is 12.551
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    12.565               0.000 ftdi_clk 
-    Info (332119):    16.486               0.000 clk 
-Info (332146): Worst-case removal slack is 1.874
+    Info (332119):    12.551               0.000 ftdi_clk 
+    Info (332119):    16.222               0.000 clk 
+Info (332146): Worst-case removal slack is 1.897
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.874               0.000 ftdi_clk 
-    Info (332119):     2.542               0.000 clk 
-Info (332146): Worst-case minimum pulse width slack is 7.958
+    Info (332119):     1.897               0.000 ftdi_clk 
+    Info (332119):     3.191               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is 7.949
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     7.958               0.000 ftdi_clk 
-    Info (332119):     9.583               0.000 clk 
-Info (332114): Report Metastability: Found 47 synchronizer chains.
+    Info (332119):     7.949               0.000 ftdi_clk 
+    Info (332119):     9.578               0.000 clk 
+Info (332114): Report Metastability: Found 49 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 
-    Info (332114): Number of Synchronizer Chains Found: 47
+    Info (332114): Number of Synchronizer Chains Found: 49
     Info (332114): Shortest Synchronizer Chain: 2 Registers
-    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.851
-    Info (332114): Worst Case Available Settling Time: 23.244 ns
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.816
+    Info (332114): Worst Case Available Settling Time: 24.888 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.5
@@ -734,43 +722,43 @@ Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Warning (332060): Node: ahmed_clk was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_m2i1:auto_generated|delayed_wrptr_g[3] is being clocked by ahmed_clk
+    Info (13166): Register tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_03i1:auto_generated|delayed_wrptr_g[1] is being clocked by ahmed_clk
 Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
     Critical Warning (332169): From clk (Rise) to clk (Rise) (setup and hold)
     Critical Warning (332169): From ftdi_clk (Rise) to ftdi_clk (Rise) (setup and hold)
-Info (332146): Worst-case setup slack is 6.302
+Info (332146): Worst-case setup slack is 7.904
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     6.302               0.000 ftdi_clk 
-    Info (332119):     9.935               0.000 clk 
-Info (332146): Worst-case hold slack is 0.255
+    Info (332119):     7.904               0.000 ftdi_clk 
+    Info (332119):     9.476               0.000 clk 
+Info (332146): Worst-case hold slack is 0.235
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.255               0.000 ftdi_clk 
-    Info (332119):     0.322               0.000 clk 
-Info (332146): Worst-case recovery slack is 12.828
+    Info (332119):     0.235               0.000 clk 
+    Info (332119):     0.352               0.000 ftdi_clk 
+Info (332146): Worst-case recovery slack is 12.808
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    12.828               0.000 ftdi_clk 
-    Info (332119):    16.758               0.000 clk 
-Info (332146): Worst-case removal slack is 1.639
+    Info (332119):    12.808               0.000 ftdi_clk 
+    Info (332119):    16.504               0.000 clk 
+Info (332146): Worst-case removal slack is 1.628
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.639               0.000 ftdi_clk 
-    Info (332119):     2.292               0.000 clk 
+    Info (332119):     1.628               0.000 ftdi_clk 
+    Info (332119):     2.873               0.000 clk 
 Info (332146): Worst-case minimum pulse width slack is 7.820
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     7.820               0.000 ftdi_clk 
-    Info (332119):     9.600               0.000 clk 
-Info (332114): Report Metastability: Found 47 synchronizer chains.
+    Info (332119):     9.602               0.000 clk 
+Info (332114): Report Metastability: Found 49 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 
-    Info (332114): Number of Synchronizer Chains Found: 47
+    Info (332114): Number of Synchronizer Chains Found: 49
     Info (332114): Shortest Synchronizer Chain: 2 Registers
-    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.851
-    Info (332114): Worst Case Available Settling Time: 23.824 ns
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.816
+    Info (332114): Worst Case Available Settling Time: 25.363 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.5
@@ -778,43 +766,43 @@ Info (332114): Report Metastability: Found 47 synchronizer chains.
     Info (332114):   - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
 Info: Analyzing Fast 1200mV 0C Model
 Warning (332060): Node: ahmed_clk was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_m2i1:auto_generated|delayed_wrptr_g[3] is being clocked by ahmed_clk
+    Info (13166): Register tx_specified_len:u_tx_specified_len|ahmed_fifo:ahmed_fifo_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_03i1:auto_generated|delayed_wrptr_g[1] is being clocked by ahmed_clk
 Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
     Critical Warning (332169): From clk (Rise) to clk (Rise) (setup and hold)
     Critical Warning (332169): From ftdi_clk (Rise) to ftdi_clk (Rise) (setup and hold)
-Info (332146): Worst-case setup slack is 12.145
+Info (332146): Worst-case setup slack is 12.903
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    12.145               0.000 ftdi_clk 
-    Info (332119):    15.874               0.000 clk 
-Info (332146): Worst-case hold slack is 0.064
+    Info (332119):    12.903               0.000 ftdi_clk 
+    Info (332119):    15.343               0.000 clk 
+Info (332146): Worst-case hold slack is 0.095
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.064               0.000 ftdi_clk 
-    Info (332119):     0.120               0.000 clk 
-Info (332146): Worst-case recovery slack is 14.885
+    Info (332119):     0.095               0.000 clk 
+    Info (332119):     0.140               0.000 ftdi_clk 
+Info (332146): Worst-case recovery slack is 14.844
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    14.885               0.000 ftdi_clk 
-    Info (332119):    18.428               0.000 clk 
-Info (332146): Worst-case removal slack is 0.817
+    Info (332119):    14.844               0.000 ftdi_clk 
+    Info (332119):    18.303               0.000 clk 
+Info (332146): Worst-case removal slack is 0.844
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.817               0.000 ftdi_clk 
-    Info (332119):     1.106               0.000 clk 
-Info (332146): Worst-case minimum pulse width slack is 7.508
+    Info (332119):     0.844               0.000 ftdi_clk 
+    Info (332119):     1.395               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is 7.510
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     7.508               0.000 ftdi_clk 
-    Info (332119):     9.270               0.000 clk 
-Info (332114): Report Metastability: Found 47 synchronizer chains.
+    Info (332119):     7.510               0.000 ftdi_clk 
+    Info (332119):     9.268               0.000 clk 
+Info (332114): Report Metastability: Found 49 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 
-    Info (332114): Number of Synchronizer Chains Found: 47
+    Info (332114): Number of Synchronizer Chains Found: 49
     Info (332114): Shortest Synchronizer Chain: 2 Registers
-    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.851
-    Info (332114): Worst Case Available Settling Time: 29.119 ns
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.816
+    Info (332114): Worst Case Available Settling Time: 29.849 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.5
@@ -823,9 +811,9 @@ Info (332114): Report Metastability: Found 47 synchronizer chains.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 4796 megabytes
-    Info: Processing ended: Tue Nov 28 16:54:55 2023
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4800 megabytes
+    Info: Processing ended: Thu Dec 14 12:42:19 2023
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 
 

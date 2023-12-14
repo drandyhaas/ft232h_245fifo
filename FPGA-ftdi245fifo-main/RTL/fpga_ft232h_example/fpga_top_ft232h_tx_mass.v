@@ -12,11 +12,12 @@
 module fpga_top_ft232h_tx_mass (
     input  wire         clk,            // main clock, connect to on-board crystal oscillator
     
-    output wire  [ 3:0] LED,
+    output wire LED,
     
     // USB2.0 HS (FT232H chip) ------------------------------------------------------------
 	 input wire     ahmed_clk,
 	 input wire     ahmed_data,
+	 output wire    debugout,
 	 //output wire         ftdi_resetn,    // to FT232H's pin34 (RESET#) , !!!!!! UnComment this line if this signal is connected to FPGA !!!!!!
     output wire         ftdi_pwrsav,    // to FT232H's pin31 (PWRSAV#), !!!!!! UnComment this line if this signal is connected to FPGA !!!!!!
     output wire         ftdi_siwu,      // to FT232H's pin28 (SIWU#)  , !!!!!! UnComment this line if this signal is connected to FPGA !!!!!!
@@ -99,6 +100,7 @@ tx_specified_len u_tx_specified_len (
     .clk                   ( clk                ),
 	 .ahmed_clk             ( ahmed_clk          ),
     .ahmed_data            ( ahmed_data         ),
+	 .debugout              ( debugout           ),
     .i_tready              ( rx_tready          ),
     .i_tvalid              ( rx_tvalid          ),
     .i_tdata               ( rx_tdata           ),
@@ -113,20 +115,6 @@ tx_specified_len u_tx_specified_len (
 
 
 //-----------------------------------------------------------------------------------------------------------------------------
-// show the low 3-bit of the last received data on LED
-//-----------------------------------------------------------------------------------------------------------------------------
-reg  [2:0] tdata_d = 3'h0;
-
-always @ (posedge clk)
-    if (rx_tvalid)
-        tdata_d <= rx_tdata[2:0];
-
-assign LED[2:0] = tdata_d;
-
-
-
-
-//-----------------------------------------------------------------------------------------------------------------------------
 // if ftdi_clk continuous run, then beat will blink. The function of this module is to observe whether ftdi_clk is running
 //-----------------------------------------------------------------------------------------------------------------------------
 clock_beat # (
@@ -134,7 +122,7 @@ clock_beat # (
     .BEAT_FREQ             ( 5                  )
 ) u_ftdi_clk_beat (
     .clk                   ( ftdi_clk           ),
-    .beat                  ( LED[3]             )
+    .beat                  ( LED             )
 );
 
 

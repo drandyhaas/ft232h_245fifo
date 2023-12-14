@@ -13,6 +13,7 @@ module tx_specified_len (
     input  wire        clk,
 	 input  wire        ahmed_clk,
     input  wire        ahmed_data,
+	 output wire        debugout,
     // AXI-stream slave
     output wire        i_tready,
     input  wire        i_tvalid,
@@ -36,8 +37,6 @@ localparam [2:0] RX_BYTE0 = 3'd0,
 reg [ 2:0]       state = RX_BYTE0;
 
 reg [31:0]       length = 0;
-integer counter=0;
-
 
 always @ (posedge clk or negedge rstn)
     if (~rstn) begin
@@ -71,7 +70,7 @@ always @ (posedge clk or negedge rstn)
             end
             
             default :  // TX_DATA :
-                if (o_tready && (rdusedw_sig>7'd4) ) begin // require a few bytes in the queue
+                if (o_tready && (rdusedw_sig>4) ) begin // require a few bytes in the queue
                     if (length >= 4) begin
                         length <= length - 4;								
 								rdreq_sig <= 1'b1;
@@ -107,11 +106,15 @@ assign o_tlast  = (length>=4) ? 1'b0 : 1'b1;
 assign wrreq_sig = 1'b1; // add to fifo every wrclk cycle (whether it's full or not)
 //ahmed_data gets put into fifo each wrclk cycle
 
+assign debugout = wrfull_sig;
+//assign debugout = ahmed_clk;
+
 //`define TESTING
 `ifndef TESTING
 wire wrclk_sig; assign wrclk_sig = ahmed_clk; // real operation
 `else
 reg wrclk_sig;
+integer counter=0;
 always @ (posedge clk) begin // for testing
 	if (counter==0) wrclk_sig <= 1'b1;
 	else wrclk_sig <= 1'b0;
@@ -124,7 +127,7 @@ reg rdreq_sig = 1'b0;
 wire wrreq_sig;
 wire [31:0] q_sig;
 wire rdempty_sig;
-wire [7:0] rdusedw_sig;
+wire [8:0] rdusedw_sig;
 wire wrfull_sig;
 
 
